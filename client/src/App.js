@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div>
         <Nav />
-        <Switch>
+        {/* <Switch>
           <Route exact path={["/", "/books"]}>
             <Books />
           </Route>
@@ -20,7 +20,7 @@ function App() {
           <Route>
             <NoMatch />
           </Route>
-        </Switch>
+        </Switch> */}
       </div>
     </Router>
   );
