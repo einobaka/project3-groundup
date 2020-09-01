@@ -1,0 +1,83 @@
+#jumbotron {
+    position: absolute;
+    width: 105vw;
+    height: 45vh;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), 
+                rgba(0, 0, 0, 0.5)), 
+                linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000000 100%), 
+                url('../../img/hero.jpg');
+    background-size: 100%;
+    background-position: center;
+}
+
+#jumbo-logo {
+    position: absolute;
+    max-width: 450px;
+    height: 85%;
+    left: 5%;
+    top: 5%;
+    background: url('../../img/logo.png');
+}
+
+#jumbo-text {
+    position: absolute;
+    height: auto;
+    left: -10%;
+    top: 15%;
+
+    font-size: 7vh;
+    line-height: 84px;
+
+    color: #F0F0E3;
+}
+
+#jumbo-counter {
+    position: absolute;
+    width: 895px;
+    height: auto;
+    left: 10%;
+    top: 30%;
+
+    font-size: 7vh;
+    line-height: 84px;
+
+    color: #F0F0E3;
+}
+
+.button {
+    background: #6F4E37;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+
+    color: #F0F0E3;
+    font-size: 1.5rem;
+}
+
+#login-btn {
+    position: absolute;
+    width: 127px;
+    height: auto;
+    top: 30vh;
+}
+
+#signup-btn {
+    position: absolute;
+    width: 127px;
+    height: auto;
+    top: 30vh;
+    left: 5vw;
+}
+
+@media only screen and (max-width: 600px) {
+    #jumbo-text {
+        display: none;
+    }
+
+    #jumbo-counter {
+        display: none;
+    }
+}
