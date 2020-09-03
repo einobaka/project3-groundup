@@ -14,34 +14,24 @@
 
 #jumbo-logo {
     position: absolute;
-    max-width: 450px;
-    height: 85%;
-    left: 5%;
-    top: 5%;
-    background: url('../../img/logo.png');
+    left: 35%;
+    max-width: 500px;
+    height: 100%;
 }
 
 #jumbo-text {
-    position: absolute;
     height: auto;
-    left: -10%;
-    top: 15%;
 
-    font-size: 7vh;
-    line-height: 84px;
+    font-size: 4.5vw;
 
     color: #F0F0E3;
 }
 
 #jumbo-counter {
-    position: absolute;
     width: 895px;
     height: auto;
-    left: 10%;
-    top: 30%;
 
-    font-size: 7vh;
-    line-height: 84px;
+    font-size: 4.5vw;
 
     color: #F0F0E3;
 }
@@ -54,25 +44,26 @@
     border-radius: 12px;
 
     color: #F0F0E3;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 #login-btn {
-    position: absolute;
     width: 127px;
     height: auto;
-    top: 30vh;
 }
 
 #signup-btn {
-    position: absolute;
     width: 127px;
     height: auto;
-    top: 30vh;
-    left: 5vw;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
+
+    #jumbotron {
+        background-size: 225%;
+        height: 40vh;
+    }
+
     #jumbo-text {
         display: none;
     }
@@ -80,4 +71,25 @@
     #jumbo-counter {
         display: none;
     }
+
+    #jumbo-logo {
+        height: 200px;
+        margin-top: 5%;
+        left: 30%;
+    }
+
+    #login-btn {
+        position: relative;
+        width: 127px;
+        height: auto;
+        top: 100px;
+    }
+    
+    #signup-btn {
+        position: relative;
+        width: 127px;
+        height: auto;
+        top: 100px;
+    }
+
 }
