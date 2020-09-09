@@ -24,23 +24,23 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-require("./routes/routeTest")(app); //  Importing routes
+require("./routes/login-route")(app); //  Importing routes
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Add routes, both API and view
-// app.use(routes);
+app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1/react").then(( ) => {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1/react").then(() => {
   console.log("connected-to-database");
 }).catch((err) => {
   console.log("couldn't-connect")
-}) 
+})
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
