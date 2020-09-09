@@ -1,14 +1,16 @@
-const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+// const mapboxgl = require('./mapbox-gl/dist/mapbox-gl.js');
+
+const mapboxgl = require('mapbox-gl')
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoia2V5bWFzdGVyNjE2IiwiYSI6ImNrZWZ6b3NmdjBvbHIycm16dmVoOHc5c2sifQ.1mzjAjlBuwog0SXrzQxxHw';
 
 var theMap = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/mapbox/streets-v11'
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11'
 });
 
 document.getElementById('map').innerHTML = theMap;
-console.log(theMap)
+console.log('success')
 
 
 
@@ -29,6 +31,6 @@ console.log(theMap)
 // outMap.append(map);
 
 // function launchMap() {
-    
+
 // };
 // launchMap()
