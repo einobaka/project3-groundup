@@ -14,9 +14,7 @@ module.exports = function (app) {
     // Register User
     app.post('/register', function (req, res) {
         var password = req.body.password;
-     
-
-        
+    
             var newUser = new db.User({
                 name: req.body.name,
                 email: req.body.email,
@@ -50,4 +48,5 @@ module.exports = function (app) {
         req.logout();
         res.send(null)
     });
+
 };

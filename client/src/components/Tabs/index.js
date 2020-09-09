@@ -1,9 +1,5 @@
 import React from 'react';
 
-
-
-
-
 function Tabs() {
         return (
             <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import SearchBar from "../SearchBar"
-import Tabs from "../Tabs";
+// import Tabs from "../Tabs";
 
 
 const SearchContainer = () => {
