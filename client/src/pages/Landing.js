@@ -3,12 +3,15 @@ import Jumbotron from '../components/Jumbotron';
 import SignUpModal from '../components/SignUpModal';
 import SearchBar from '../components/SearchBar';
 import LatestDrink from '../components/LatestDrink';
+import API from '../utils/API';
 
 class Landing extends Component {
 
   signUpSubmit = data => {
     console.log(data);
+    API.signUpSubmit(data);
   }
+
 
   render() {
     return (
