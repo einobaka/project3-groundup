@@ -1,0 +1,11 @@
+#nav-logo {
+position: absolute;
+width: 151px;
+height: 154px;
+left: 80px;
+top: 0px;
+ 
+/*background: url("../../img/Logo_White.png");*/
+filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.33));
+border-radius: 11px; 
+}
