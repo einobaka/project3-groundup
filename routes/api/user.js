@@ -15,10 +15,7 @@ module.exports = function (app) {
     // Register User
     app.post('/register', function (req, res) {
 
-        console.log(req.body.password);
-        console.log(req.body.name);
-        
-        var password = req.body.password;
+        console.log(req.body);
 
         var newUser = new db.User({
             name: req.body.name,
@@ -37,8 +34,8 @@ module.exports = function (app) {
     app.post('/login',
         passport.authenticate('local'),
         function (req, res) {
-            console.log(req.user);
-            res.send(req.user);
+            console.log(req.body);
+            // res.send(req.user);
         }
     );
 
