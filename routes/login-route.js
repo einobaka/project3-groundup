@@ -15,7 +15,8 @@ module.exports = function (app) {
     // Register User
     app.post('/register', function (req, res) {
 
-        console.log(req);
+        console.log(req.body.password);
+        console.log(req.body.name);
         
         var password = req.body.password;
 
@@ -45,7 +46,6 @@ module.exports = function (app) {
     app.get('/user', function (req, res) {
         res.send(req.user);
     })
-
 
     // Endpoint to logout
     app.get('/logout', function (req, res) {

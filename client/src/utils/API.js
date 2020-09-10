@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
   // Sign Up
   signUpSubmit: function (data) {
-    console.log(data.body)
+    // console.log(data)
     return axios.post("/register", data);
   },
   // // Gets the book with the given id

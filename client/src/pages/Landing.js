@@ -12,7 +12,6 @@ class Landing extends Component {
     API.signUpSubmit(data);
   }
 
-
   render() {
     return (
       <div>
