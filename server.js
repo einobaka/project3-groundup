@@ -13,12 +13,13 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 // Requiring our route
 
 
 // We need to use sessions to keep track of our user's login status
 app.use(
-  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+  session({ secret: "beans4lyfe", resave: true, saveUninitialized: true })
 );
 
 // Passport init
@@ -38,7 +39,7 @@ app.use(routes);
 mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1/groundup").then(() => {
   console.log("connected-to-database");
   // db.Drink.create({
-    
+
   //   name: "coffee",
   //   price: 5,
   //   category: "Hot Drink",

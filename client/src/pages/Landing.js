@@ -10,11 +10,12 @@ import API from '../utils/API';
 class Landing extends Component {
 
   signUpSubmit = data => {
+    // console.log(data);
     API.signUpSubmit(data);
   }
 
   loginSubmit = data => {
-    console.log(data);
+    // console.log(data);
     API.loginSubmit(data);
   }
 
