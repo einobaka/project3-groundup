@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import Jumbotron from '../components/Jumbotron';
 import SignUpModal from '../components/SignUpModal';
+import LoginModal from '../components/LoginModal';
 import SearchBar from '../components/SearchBar';
 import LatestDrink from '../components/LatestDrink';
 
 class Landing extends Component {
 
   signUpSubmit = data => {
+    console.log(data);
+  }
+
+  loginSubmit = data => {
     console.log(data);
   }
 
@@ -17,6 +22,9 @@ class Landing extends Component {
           <div class="row">
             <SignUpModal 
             signUpSubmit={this.signUpSubmit}
+            />
+            <LoginModal 
+            loginSumbit={this.loginSubmit}
             />
             <Jumbotron />
           </div>
