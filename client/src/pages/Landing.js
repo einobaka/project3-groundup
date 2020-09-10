@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Jumbotron from '../components/Jumbotron';
 import SignUpModal from '../components/SignUpModal';
+import LoginModal from '../components/LoginModal';
 import SearchBar from '../components/SearchBar';
 import LatestDrink from '../components/LatestDrink';
 import API from '../utils/API';
@@ -12,6 +13,10 @@ class Landing extends Component {
     API.signUpSubmit(data);
   }
 
+  loginSubmit = data => {
+    console.log(data);
+  }
+
   render() {
     return (
       <div>
@@ -19,6 +24,9 @@ class Landing extends Component {
           <div class="row">
             <SignUpModal 
             signUpSubmit={this.signUpSubmit}
+            />
+            <LoginModal 
+            loginSumbit={this.loginSubmit}
             />
             <Jumbotron />
           </div>

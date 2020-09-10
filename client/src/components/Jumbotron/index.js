@@ -23,7 +23,7 @@ class Jumbotron extends Component {
               </div>
               <div class="row text-center">
                 <div class="col-6 col-sm-4 col-lg-3">
-                  <button id="login-btn" class="btn button">Login</button>
+                  <button id="login-btn" class="btn button" data-toggle="modal" data-target="#loginModal">Login</button>
                 </div>
                 <div class="col-6 col-sm-4 col-lg-3">
                   <button id="signup-btn" class="btn button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
