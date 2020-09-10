@@ -18,7 +18,7 @@ class LatestDrink extends Component {
         return (
             <div>
                 <h2 class="ml-5">Latest Drink</h2>
-                <div class="card mx-5">
+                <div class="card mx-5 shadow-lg">
                     <div class="img-container">
                         <img id="drink-image" src={this.state.image} class="card-img-top" alt="Latest Drink"></img>
                         <div class="img-overlay text-center"><span id="latest-price">${this.state.price}</span></div>

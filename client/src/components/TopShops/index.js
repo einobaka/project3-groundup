@@ -39,7 +39,7 @@ class TopShops extends Component {
         return (
             <div>
                 <h2 class="ml-5">Top Shops</h2>
-                <div class="card mx-5">
+                <div class="card mx-5 shadow-lg">
                     <div class="img-container">
                         <img id="one-image" src={this.state.one.image} class="card-img-top" alt="Top Shop"></img>
                         <div class="img-overlay text-center"><img id="one-logo" src={this.state.one.logo}></img> </div>
