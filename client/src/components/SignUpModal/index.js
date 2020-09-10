@@ -86,7 +86,7 @@ class SignUpModal extends Component {
                         <div class="modal-footer">
                             <button
                                 type="button"
-                                class="btn button"
+                                class="btn modal-button"
                                 onClick={
                                     () => this.submitSignUp()}
                             >Submit</button>
