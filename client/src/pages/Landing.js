@@ -4,6 +4,7 @@ import SignUpModal from '../components/SignUpModal';
 import LoginModal from '../components/LoginModal';
 import SearchBar from '../components/SearchBar';
 import LatestDrink from '../components/LatestDrink';
+import TopShops from '../components/TopShops';
 import API from '../utils/API';
 
 class Landing extends Component {
@@ -35,11 +36,11 @@ class Landing extends Component {
             </div>
           </div>
           <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 mb-5">
               <LatestDrink />
             </div>
-            <div class="col-12 col-md-6">
-              
+            <div class="col-12 col-md-6 mb-5">
+              <TopShops />
             </div>
           </div>
         </div>
