@@ -9,7 +9,6 @@ import API from '../utils/API';
 class Landing extends Component {
 
   signUpSubmit = data => {
-    console.log(data);
     API.signUpSubmit(data);
   }
 
