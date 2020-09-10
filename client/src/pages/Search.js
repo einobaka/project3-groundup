@@ -18,10 +18,11 @@ class Search extends Component {
         {/* <div class="col-12">
           <div class="row">             */}
             
-            <Wrapper />
+            <Wrapper>
             <Nav />
             <SearchContainer />
-            {/* </Wrapper> */}
+            </Wrapper>
+           
                    
            
           {/* </div>
