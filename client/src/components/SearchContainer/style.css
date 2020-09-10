@@ -1,4 +1,10 @@
-.searching {
-    padding: 400px 0;
-    text-align: center;
+.container {
+position: absolute;
+width: 834px;
+height: 911px;
+left: 89px;
+top: 160px;
+
+background: #F8F8F4;
+box-shadow: 15px 15px 18px rgba(0, 0, 0, 0.25);
 }

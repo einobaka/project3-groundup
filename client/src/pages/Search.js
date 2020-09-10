@@ -3,7 +3,7 @@ import React, { Component }  from "react";
 import Wrapper from "../components/Wrapper"
 import Nav from "../components/Nav";
 
-import SearchContainer from "../components/SearchContainer"
+import SearchContainer from "../components/SearchContainer";
 
 // import Jumbotron from '../components/Jumbotron';
 // import SignUpModal from '../components/SignUpModal';
@@ -14,18 +14,10 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
-        {/* <div class="col-12">
-          <div class="row">             */}
-            
+      <div>     
             <Wrapper />
             <Nav />
-            <SearchContainer />
-            {/* </Wrapper> */}
-                   
-           
-          {/* </div>
-          </div> */}
+            <SearchContainer />  
       </div>
     )
   }

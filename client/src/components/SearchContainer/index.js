@@ -1,17 +1,18 @@
 import React from "react";
-import "./style.css";
-import SearchBar from "../SearchBar"
-import Tabs from "../Tabs";
+import SearchBarPage from "../SearchBarPage";
+// import Tabs from "../Tabs";
+
 
 
 const SearchContainer = () => {
     return (
-        <div className="searching">
-            <SearchBar />
-            {/* <Tabs /> */}
+        <div className="container">
+        <SearchBarPage />
+        {/* <Tabs /> */}
         </div>
-        
+    
     )
+
 }
 
 export default SearchContainer;
