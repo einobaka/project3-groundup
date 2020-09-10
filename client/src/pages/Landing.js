@@ -26,7 +26,7 @@ class Landing extends Component {
             signUpSubmit={this.signUpSubmit}
             />
             <LoginModal 
-            loginSumbit={this.loginSubmit}
+            loginSubmit={this.loginSubmit}
             />
             <Jumbotron />
           </div>

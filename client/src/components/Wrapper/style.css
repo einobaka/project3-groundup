@@ -1,9 +1,10 @@
 .wrapper {
-    position: absolute;
-width: 1457px;
+position: absolute;
+width: 100vw;
 height: 1111px;
 left: 0px;
 top: -7px;
 
-background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F0F0E3 78.12%), url("../../img/searchBackground.jpeg");
+background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F0F0E3 78.12%), url("../../img/beans.jpg");
+background-size: 25vw;
 }
