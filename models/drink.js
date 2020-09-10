@@ -1,16 +1,17 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const drinksSchema = new Schema({
+const drinkSchema = new Schema({
+  
   name: { type: String, required: true },
   price: { type: Number, required: true },
   category: { type: String },
   size: { type: Number },
   rating: { type: Number},
   image: { data: Buffer, contentType: String},
-  comment: { type: String }
+  review: { type: String }
 });
 
-const Drinks = mongoose.model("Drinks", drinksSchema);
+const Drink = mongoose.model("Drink", drinkSchema);
 
-module.exports = Drinks;
+module.exports = Drink;

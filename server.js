@@ -1,5 +1,6 @@
 const express = require("express");
 const session = require("express-session");
+const db = require("./models")
 
 // Requiring passport as we've configured it
 const passport = require("passport");
@@ -24,7 +25,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-require("./routes/login-route")(app); //  Importing routes
+require("./routes/api/user")(app); //  Importing routes
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -34,8 +35,18 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1/react").then(() => {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1/groundup").then(() => {
   console.log("connected-to-database");
+  db.Drink.create({
+    
+    name: "coffee",
+    price: 5,
+    category: "Hot Drink",
+    size: 8,
+    rating: 5,
+    image: "#",
+    review: "Awesome"
+  })
 }).catch((err) => {
   console.log("couldn't-connect")
 })
