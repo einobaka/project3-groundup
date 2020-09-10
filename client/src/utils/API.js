@@ -4,8 +4,14 @@ export default {
   // Sign Up
   signUpSubmit: function (data) {
     // console.log(data)
-    return axios.post("/register", data);
+    return axios.post('/register', data);
   },
+  // Login
+  loginSubmit: function (data) {
+    return axios.post('login', data);
+  }
+  
+
   // // Gets the book with the given id
   // getBook: function(id) {
   //   return axios.get("/api/books/" + id);
