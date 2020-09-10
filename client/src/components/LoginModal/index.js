@@ -24,9 +24,11 @@ class SignUpModal extends Component {
     }
 
     login() {
-        const username = this.state.username;
-        const password = this.state.password;
-        
+        const data = {
+            username: this.state.username,
+            password: this.state.password
+        }
+        this.props.loginSubmit(data);
     }
 
     render() {
