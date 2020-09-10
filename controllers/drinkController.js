@@ -26,10 +26,11 @@ module.exports = {
   create: function(req, res) {
     db.Drink
       .create(req.body)
-      .then(dbDrinks => {
-        db.Shop.findOneAndUpdate({ _id: req.body.shop }, { $push: { drinks: dbDrinks._id }})
-        .then(dbDrinks => res.json(dbDrinks));
-      })
+      .then(dbDrinks => res.json(dbDrinks))
+        // db.Shop.findOneAndUpdate({ _id: req.body.shop }, { $push: { drinks: dbDrinks._id }})
+        // .then(dbDrinks => res.json(dbDrinks));
+        // console.log(dbDrinks)
+      
       .catch(err => res.status(422).json(err));
   },
 
