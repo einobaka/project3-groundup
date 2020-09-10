@@ -4,11 +4,13 @@ import SignUpModal from '../components/SignUpModal';
 import LoginModal from '../components/LoginModal';
 import SearchBar from '../components/SearchBar';
 import LatestDrink from '../components/LatestDrink';
+import API from '../utils/API';
 
 class Landing extends Component {
 
   signUpSubmit = data => {
     console.log(data);
+    API.signUpSubmit(data);
   }
 
   loginSubmit = data => {
