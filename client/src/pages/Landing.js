@@ -15,6 +15,7 @@ class Landing extends Component {
 
   loginSubmit = data => {
     console.log(data);
+    API.loginSubmit(data);
   }
 
   render() {
@@ -26,7 +27,7 @@ class Landing extends Component {
             signUpSubmit={this.signUpSubmit}
             />
             <LoginModal 
-            loginSumbit={this.loginSubmit}
+            loginSubmit={this.loginSubmit}
             />
             <Jumbotron />
           </div>
