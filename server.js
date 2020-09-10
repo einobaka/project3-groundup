@@ -37,16 +37,16 @@ app.use(routes);
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1/groundup").then(() => {
   console.log("connected-to-database");
-  db.Drink.create({
+  // db.Drink.create({
     
-    name: "coffee",
-    price: 5,
-    category: "Hot Drink",
-    size: 8,
-    rating: 5,
-    image: "#",
-    review: "Awesome"
-  })
+  //   name: "coffee",
+  //   price: 5,
+  //   category: "Hot Drink",
+  //   size: 8,
+  //   rating: 5,
+  //   image: "#",
+  //   review: "Awesome"
+  // })
 }).catch((err) => {
   console.log("couldn't-connect")
 })
