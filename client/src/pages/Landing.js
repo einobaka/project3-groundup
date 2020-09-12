@@ -9,14 +9,12 @@ import API from '../utils/API';
 
 class Landing extends Component {
 
-  signUpSubmit = data => {
-    // console.log(data);
-    API.signUpSubmit(data);
+  signup
+    API.signUpSubmit(data).then(window.location.href = "/search");
   }
 
   loginSubmit = data => {
-    // console.log(data);
-    API.loginSubmit(data);
+    API.loginSubmit(data).then(window.location.href = "/search");;
   }
 
   render() {
