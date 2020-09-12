@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 export default {
   // Sign Up
   signUpSubmit: function (data) {
