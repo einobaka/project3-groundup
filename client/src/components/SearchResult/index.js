@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 // import SearchContainer from "../components/SearchContainer";
 // import SearchForm from "../components/SearchForm";
-import ListItems from "../List";
+import ListItems from "../DrinkList";
 // import Alert from "../components/Alert";
 
 class Search extends Component {

@@ -38,17 +38,17 @@ app.use(routes);
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1/groundup").then(() => {
   console.log("connected-to-database");
-  // db.Drink.create({
-  //   user: "5f5c603e102f8e272c984f33",
-  //   name: "coffee",
-  //   price: 5,
-  //   category: "Hot Drink",
-  //   size: 8,
-  //   rating: 5,
-  //   logo: "https://picsum.photos/50",
-  //   review: "Awesome",
-  //   image: "https://picsum.photos/50"
-  // })
+  db.Drink.create({
+    user: "5f5c603e102f8e272c984f33",
+    name: "coffee",
+    price: 5,
+    category: "Hot Drink",
+    size: 8,
+    rating: 5,
+    logo: "https://picsum.photos/50",
+    review: "Awesome",
+    image: "https://picsum.photos/50"
+  })
 
   // db.Shop.create({
   //   user: "5f5c383f7715b70ed81138f1",
