@@ -9,7 +9,7 @@ import API from '../utils/API';
 
 class Landing extends Component {
 
-  signup = data => {
+  signUpSubmit = data => {
     API.signUpSubmit(data).then(window.location.href = "/search");
   }
 
