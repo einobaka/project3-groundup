@@ -15,9 +15,9 @@ class Tabs extends React.Component {
                 <Nav.Item>
                     <Nav.Link eventKey="link-2">Shop</Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
+                {/* <Nav.Item>
                     <Nav.Link eventKey="link-3">Nearest Coffee</Nav.Link>
-                </Nav.Item>
+                </Nav.Item> */}
             </Nav>
         )
     }
