@@ -14,8 +14,7 @@ class Landing extends Component {
   }
 
   loginSubmit = data => {
-    console.log(data);
-    API.loginSubmit(data);
+    API.loginSubmit(data).then(window.location.href = "/search");;
   }
 
   render() {
