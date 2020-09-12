@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
 import './style.css';
 
-class SignUpModal extends Component {
-    constructor() {
+class AddModal extends Component {
+    constructor(props) {
+        super(props);
         this.state = {
-            name: "",
-            email: "",
-            username: "",
-            password: "",
-            passwordConfirm: "",
-            fieldsDisplay: "none",
-            passwordDisplay: "none"
+            drinkDisplay: "none"
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -28,40 +23,13 @@ class SignUpModal extends Component {
         });
     }
 
-    submitSignUp() {
-        this.setState({ fieldsDisplay: "none" });
-        this.setState({ passwordDisplay: "none" });
-        if (this.state.name &&
-            this.state.email &&
-            this.state.username &&
-            this.state.password &&
-            this.state.passwordConfirm
-        ) {
-            if (this.state.password === this.state.passwordConfirm) {
-                this.props.signUpSubmit({
-                    name: this.state.name,
-                    email: this.state.email,
-                    username: this.state.username,
-                    password: this.state.password,
-                    passwordConfirm: this.state.passwordConfirm
-                })
-            } else {
-                this.setState({ passwordDisplay: "block" })
-            }
-        } else {
-            this.setState({ fieldsDisplay: "block" })
-        }
-
-          
-    }
-
     render() {
         return (
-            <div class="modal fade" id="signUpModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal fade" id="addModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
+                            <h5 class="modal-title" id="staticBackdropLabel">Leave a review</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -69,28 +37,21 @@ class SignUpModal extends Component {
                         <div class="modal-body">
                             <form>
                                 <div class="form-group">
-                                    <small id="requiredFields" class="form-text text-danger" style={{ display: this.state.fieldsDisplay }}>Fill out all required* fields</small>
-                                    <label for="nameInput">Name*</label>
-                                    <input type="text" class="form-control" id="nameInput" name="name" onChange={this.handleInputChange}></input>
-                                    <label for="emailInput">Email*</label>
-                                    <input type="email" class="form-control" id="emailInput" name="email" onChange={this.handleInputChange} ></input>
-                                    <label for="usernameInput">Username*</label>
-                                    <input type="text" class="form-control" id="usernameInput" name="username" onChange={this.handleInputChange}></input>
-                                    <small id="passwordNoMatch" class="form-text text-danger" style={{ display: this.state.passwordDisplay }}>Passwords do not match!</small>
-                                    <label for="passwordInput">Password*</label>
-                                    <input type="password" class="form-control" id="passwordInput" name="password" onChange={this.handleInputChange}></input>
-                                    <label for="passwordConfirmInput">Confirm Password*</label>
-                                    <input type="password" class="form-control" id="passwordConfirmInput" name="passwordConfirm" onChange={this.handleInputChange}></input>
+                                    <label for="shopNameInput"><h6>Where are you at?</h6></label>
+                                    <input type="text" class="form-control" id="shopNameInput"></input>
+                                    <ul class="list-group" id="matchingShops">
+
+                                        
+                                    </ul>
+                                    <p>Can't find the shop you're at? Add it <a href="" data-toggle="modal" data-target="#shopModal">here</a>.</p>
+                                    <div style={{ display: this.state.drinkDisplay }}>
+                                    <h6 class="modal-title py-2">What are you drinking?</h6>
+                                    <label for="categoryInput">Category:</label>
+                                    <input type="text" class="form-control" id="categoryInput"></input></div>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button
-                                type="button"
-                                class="btn modal-button"
-                                onClick={
-                                    () => this.submitSignUp()}
-                            >Submit</button>
                         </div>
                     </div>
                 </div>
@@ -100,4 +61,4 @@ class SignUpModal extends Component {
 
 };
 
-export default SignUpModal;
+export default AddModal;
