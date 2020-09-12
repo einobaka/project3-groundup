@@ -1,5 +1,6 @@
 import React from "react";
 // import "./style.css";
+import StaticRating from "../StaticRating"
 
 function ListItems(props) {
   console.log(props)
@@ -10,7 +11,7 @@ function ListItems(props) {
       <span> {props.name} </span>
       <span> {props.size} </span>
       <span> {props.price} </span>
-      <span> {props.rating} </span>
+      <span> <StaticRating rating={props.rating}/> </span>
     </li>
   );
 }
