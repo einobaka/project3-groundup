@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 export default {
   // Sign Up
   signUpSubmit: function (data) {
@@ -8,9 +9,9 @@ export default {
   },
   // Login
   loginSubmit: function (data) {
-    return axios.post('login', data);
+    return axios.post('/login', data);
   }
-  
+
 
   // // Gets the book with the given id
   // getBook: function(id) {

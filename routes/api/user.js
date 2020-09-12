@@ -2,7 +2,6 @@
 var db = require("../../models");
 var passport = require("passport");
 
-
 module.exports = function (app) {
     // Using the passport.authenticate middleware with our local strategy.
     // If the user has valid login credentials, send them to the members page.
@@ -15,7 +14,7 @@ module.exports = function (app) {
     // Register User
     app.post('/register', function (req, res) {
 
-        console.log(req.body);
+        // console.log(req.body);
 
         var newUser = new db.User({
             name: req.body.name,
@@ -26,7 +25,7 @@ module.exports = function (app) {
 
         db.User.createUser(newUser, function (err, user) {
             if (err) throw err;
-            res.send(user).end()
+            res.send(user);
         });
 
     });
@@ -34,8 +33,10 @@ module.exports = function (app) {
     app.post('/login',
         passport.authenticate('local'),
         function (req, res) {
-            console.log(req);
-        }
+            // console.log(req.body);
+            res.send(req.user);
+            // add send for rendering page when logged in
+          }
     );
 
     // Endpoint to get current user
@@ -46,7 +47,7 @@ module.exports = function (app) {
     // Endpoint to logout
     app.get('/logout', function (req, res) {
         req.logout();
-        res.send(null)
+        res.json({ "Response": "User Logged Out" })
     });
 
 };

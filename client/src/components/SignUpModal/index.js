@@ -52,6 +52,8 @@ class SignUpModal extends Component {
         } else {
             this.setState({ fieldsDisplay: "block" })
         }
+
+          
     }
 
     render() {
