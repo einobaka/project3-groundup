@@ -2,7 +2,7 @@ import React, { Component }  from "react";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Wrapper from "../components/Wrapper"
 import Nav from "../components/Nav";
-
+import HistoryCard from "../components/HistoryCard";
 import SearchContainer from "../components/SearchContainer"
 
 // import Jumbotron from '../components/Jumbotron';
@@ -21,6 +21,7 @@ class Search extends Component {
             <Wrapper>
             <Nav />
             <SearchContainer />
+            <HistoryCard />
             </Wrapper>
            
                    
