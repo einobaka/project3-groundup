@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './style.css';
+import API from '../../utils/API';
 
-class LoginModal extends Component {
+class ShopModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: "",
-            password: "",
-            incorrectDisplay: "none",
+            name: "",
+            image: ""
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -23,21 +23,21 @@ class LoginModal extends Component {
         });
     }
 
-    login() {
-        const data = {
-            username: this.state.username,
-            password: this.state.password
+    addShop() {
+        const shop = {
+            name: this.state.name,
+            image: ""
         }
-        this.props.loginSubmit(data);
+        API.addShop(shop)
     }
 
     render() {
         return (
-            <div class="modal fade" id="loginModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal fade" id="shopModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
+                            <h5 class="modal-title" id="staticBackdropLabel">Add A Shop</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -45,11 +45,11 @@ class LoginModal extends Component {
                         <div class="modal-body">
                             <form>
                                 <div class="form-group">
-                                    <small id="incorrectText" class="form-text text-danger" style={{ display: this.state.incorrectDisplay }}>Incorrect username or password</small>
-                                    <label for="username">Username</label>
-                                    <input type="text" class="form-control" id="username" name="username" onChange={this.handleInputChange}></input>
-                                    <label for="passwordInput">Password</label>
-                                    <input type="password" class="form-control" id="passwordInput" name="password" onChange={this.handleInputChange}></input>
+                                    <label for="shopNameInput">Shop Name:</label>
+                                    <input class="form-control mb-2" type="text" id="shopNameInput" name="name" onChange={this.handleInputChange}></input>
+                                    <label for="uploadBtn">Logo:</label>
+                                    <button id="uploadBtn" class="ml-3 btn btn-primary">Upload</button>
+                                    <small class="mt-1"><p>If you have the shop logo, we'd love for you to upload it!</p></small>
                                 </div>
                             </form>
                         </div>
@@ -57,10 +57,8 @@ class LoginModal extends Component {
                             <button
                                 type="button"
                                 class="btn modal-button"
-                                data-dismiss="modal"
-                                onClick={
-                                    () => this.login()}
-                            >Login</button>
+                                onClick={() => this.addShop()}
+                            >Add</button>
                         </div>
                     </div>
                 </div>
@@ -70,4 +68,4 @@ class LoginModal extends Component {
 
 };
 
-export default LoginModal;
+export default ShopModal;

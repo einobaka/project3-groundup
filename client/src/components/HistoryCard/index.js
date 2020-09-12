@@ -9,7 +9,7 @@ class HistoryCard extends React.Component {
             <Card className="text-center history">
                 <Card.Header>Scoot's History</Card.Header>
                 <Card.Body>
-                    <Card.Title>Recent Reviews</Card.Title>
+                    <Card.Title>Recent Reviews<button class="btn" data-toggle="modal" data-target="#addModal"><i class="fas fa-plus"></i></button></Card.Title>
                     <Card.Text>
                         With supporting text below as a natural lead-in to additional content.
                     </Card.Text>

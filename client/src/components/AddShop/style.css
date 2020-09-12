@@ -1,0 +1,9 @@
+.modal-button {
+    background: transparent;
+    border: 2px solid #6f4e37;
+    box-sizing: border-box;
+    border-radius: 12px;
+
+    color: #6f4e37;
+    font-size: 1rem;
+}

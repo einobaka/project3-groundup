@@ -15,7 +15,11 @@ export default {
   getDrinkData: function(data) {
     return axios.get('/api/drink', data);
   },
-  //
+  
+  addShop: function(data) {
+    return axios.post('/api/shop', data);
+  },
+
   getShopData: function(data) {
     return axios.get('/api/shop', data);
   }

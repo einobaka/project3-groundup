@@ -7,6 +7,8 @@ import SearchContainer from "../components/SearchContainer"
 import SignUpModal from '../components/SignUpModal';
 import LoginModal from '../components/LoginModal';
 import HistoryCard from '../components/HistoryCard';
+import AddModal from '../components/AddModal';
+import ShopModal from '../components/AddShop';
 
 class Search extends Component {
 
@@ -29,6 +31,8 @@ class Search extends Component {
             <LoginModal
               loginSubmit={this.loginSubmit}
             />
+            <AddModal />
+            <ShopModal />
             <Wrapper>
             <div class="col-12 col-md-6 mb-5">
               <Nav />
