@@ -45,6 +45,12 @@ class Search extends Component {
           this.state.results.map(result => (
             <ListItems 
             name={result.name}
+            category={result.category} 
+            name={result.name} 
+            size={result.size}
+            price={result.price}
+            rating={result.rating} 
+            logo={result.logo}
             />
           ))
         }

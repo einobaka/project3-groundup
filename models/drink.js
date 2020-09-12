@@ -11,9 +11,10 @@ const drinkSchema = new Schema({
   price: { type: Number, required: true },
   category: { type: String },
   size: { type: Number },
-  rating: { type: Number},
-  image: { data: Buffer, contentType: String},
-  review: { type: String }
+  rating: { type: Number },
+  logo: { type: String },
+  review: { type: String },
+  image: { type: String},
 });
 
 const Drink = mongoose.model("Drink", drinkSchema);
