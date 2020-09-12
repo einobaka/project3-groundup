@@ -57,3 +57,27 @@ left: 1034px;
 top: 49px;
 
 }
+@media only screen and (max-width: 900px) {
+
+#nav-logo {
+position: absolute;
+width: 95px;
+height: 95px;
+left: 153px;
+top: 5px;
+
+filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.33));
+border-radius: 11px; 
+    }
+
+
+    #login-btn {
+        width: 127px;
+        height: auto;
+    }
+    
+    #signup-btn {
+        width: 127px;
+        height: auto;
+    }
+}
