@@ -1,5 +1,8 @@
 const db = require("../models");
 
+// const API = require('../client/src/utils/API');
+// API.getShopData(data).then(console.log(data));
+
 // Defining methods for the drinkController
 module.exports = {
 
@@ -24,6 +27,7 @@ module.exports = {
   // Creates a new drink record
   
   create: function(req, res) {
+
     db.Drink
       .create(req.body)
       .then(dbDrinks => res.json(dbDrinks))

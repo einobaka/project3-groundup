@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 // import SearchContainer from "../components/SearchContainer";
 // import SearchForm from "../components/SearchForm";
-import ListItems from "../List";
+import ListItems from "../DrinkList";
 // import Alert from "../components/Alert";
 
 class Search extends Component {
@@ -45,6 +45,12 @@ class Search extends Component {
           this.state.results.map(result => (
             <ListItems 
             name={result.name}
+            category={result.category} 
+            name={result.name} 
+            size={result.size}
+            price={result.price}
+            rating={result.rating} 
+            logo={result.logo}
             />
           ))
         }
