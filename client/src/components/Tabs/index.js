@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
-import ListItems from '../List';
+import ListItems from '../DrinkList';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import SearchResult from '../SearchResult';
