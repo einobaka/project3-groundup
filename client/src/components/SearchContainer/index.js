@@ -7,7 +7,9 @@ import Card from 'react-bootstrap/Card'
 
 const SearchContainer = () => {
     return (
+
         <div className="searching">
+
         <Card>
             <Card.Header>
         
@@ -15,9 +17,11 @@ const SearchContainer = () => {
             <SearchTabs />
             </Card.Header>
         </Card>
+
         </div>
-        
-        
+
+
+
     )
 }
 

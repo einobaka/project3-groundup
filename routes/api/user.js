@@ -25,7 +25,7 @@ module.exports = function (app) {
 
         db.User.createUser(newUser, function (err, user) {
             if (err) throw err;
-            res.send(user).end()
+            res.send(user);
         });
 
     });
@@ -47,7 +47,7 @@ module.exports = function (app) {
     // Endpoint to logout
     app.get('/logout', function (req, res) {
         req.logout();
-        res.json({ "Response" : "User Logged Out"})
+        res.json({ "Response": "User Logged Out" })
     });
 
 };

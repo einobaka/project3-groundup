@@ -10,13 +10,11 @@ import API from '../utils/API';
 class Landing extends Component {
 
   signUpSubmit = data => {
-    // console.log(data);
-    API.signUpSubmit(data);
+    API.signUpSubmit(data).then(window.location.href = "/search");
   }
 
   loginSubmit = data => {
-    // console.log(data);
-    API.loginSubmit(data);
+    API.loginSubmit(data).then(window.location.href = "/search");;
   }
 
   render() {
@@ -24,11 +22,11 @@ class Landing extends Component {
       <div>
         <div class="col-12">
           <div class="row">
-            <SignUpModal 
-            signUpSubmit={this.signUpSubmit}
+            <SignUpModal
+              signUpSubmit={this.signUpSubmit}
             />
-            <LoginModal 
-            loginSubmit={this.loginSubmit}
+            <LoginModal
+              loginSubmit={this.loginSubmit}
             />
             <Jumbotron />
           </div>
