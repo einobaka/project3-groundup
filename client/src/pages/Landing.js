@@ -10,7 +10,7 @@ import API from '../utils/API';
 class Landing extends Component {
 
   signUpSubmit = data => {
-    API.signUpSubmit(data);
+    API.signUpSubmit(data).then(window.location.href = "/search");
   }
 
   loginSubmit = data => {
