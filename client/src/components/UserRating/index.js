@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 import ReactStars from "react-rating-stars-component";
-import empty from './empty.png';
-import half from './half.png';
-import full from './full.png';
+import empty from '../../img/empty.png';
+import half from '../../img//half.png';
+import full from '../../img//full.png';
 import "./style.css"
 
 class UserRating extends Component {
