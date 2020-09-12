@@ -16,7 +16,10 @@ class Search extends Component {
   // When the component mounts, get a list of all available base breeds and update this.state.breeds
   componentDidMount() {
     API.getDrinkData()
-      .then(res => this.setState({ name: res.data }))
+      .then(res => {
+        this.setState({ results: res.data })
+        console.log(this.state.results)
+      })
       .catch(err => console.log(err));
   }
 
@@ -37,24 +40,15 @@ class Search extends Component {
   };
   render() {
     return (
-      <div>
-        {/* <SearchContainer style={{ minHeight: "80%" }}>
-          <h1 className="text-center">Search By Drinks!</h1> */}
-          {/* <Alert
-            type="danger"
-            style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
-          >
-            {this.state.error}
-          </Alert> */}
-          {/* <SearchForm
-            handleFormSubmit={this.handleFormSubmit}
-            handleInputChange={this.handleInputChange}
-            name={this.state.name}
-          /> */}
-          {/* <ListItems results={this.state.results} /> */}
-          {/* <p>lor</p> */}
-        {/* </SearchContainer> */}
-      </div>
+        <ul className="list-group search-results">
+        {
+          this.state.results.map(result => (
+            <ListItems 
+            name={result.name}
+            />
+          ))
+        }
+        </ul>
     );
   }
 }

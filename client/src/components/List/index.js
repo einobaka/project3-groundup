@@ -3,14 +3,10 @@ import React from "react";
 
 function ListItems(props) {
   return (
-    <ul className="list-group search-results">
-      {props.results.map(result => (
-        <li key={result} className="list-group-item">
-          <p> {result} </p>
+        <li key={props.name} className="list-group-item">
+          <p> {props.name} </p>
           {/* <img alt="Dog" src={result} className="img-fluid" /> */}
         </li>
-      ))}
-    </ul>
   );
 }
 

@@ -13,7 +13,7 @@ export default {
   },
   // Drink data
   getDrinkData: function(data) {
-    return axios.post('search', data);
+    return axios.get('/api/drink', data);
   }
 
 

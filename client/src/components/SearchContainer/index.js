@@ -16,7 +16,6 @@ const SearchContainer = () => {
         
             <SearchBar />
             <SearchTabs />
-            <Search />
             </Card.Header>
         </Card>
 

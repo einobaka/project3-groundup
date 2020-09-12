@@ -36,7 +36,7 @@ module.exports = function (app) {
             // console.log(req.body);
             res.send(req.user);
             // add send for rendering page when logged in
-        }
+          }
     );
 
     // Endpoint to get current user

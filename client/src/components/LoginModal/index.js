@@ -57,6 +57,7 @@ class SignUpModal extends Component {
                             <button
                                 type="button"
                                 class="btn modal-button"
+                                data-dismiss="modal"
                                 onClick={
                                     () => this.login()}
                             >Login</button>
