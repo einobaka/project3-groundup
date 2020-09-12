@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ReactStars from "react-rating-stars-component";
-import empty from '../UserRating/empty.png';
-import half from '../UserRating/half.png';
-import full from '../UserRating/full.png';
+import empty from '../../img/empty.png';
+import half from '../../img//half.png';
+import full from '../../img//full.png';
 import "./style.css"
  
 class StaticRating extends Component {
@@ -16,7 +16,6 @@ class StaticRating extends Component {
     filledIcon: <img class="cup" src={full} />,
   };
   
-
   render() {
     return (
       <div className="Ratings">
