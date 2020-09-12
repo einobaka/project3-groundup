@@ -1,32 +1,34 @@
-import React, { Component }  from "react";
+import React, { Component } from "react";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Wrapper from "../components/Wrapper"
 import Nav from "../components/Nav";
-
+import API from '../utils/API';
 import SearchContainer from "../components/SearchContainer"
-
-// import Jumbotron from '../components/Jumbotron';
-// import SignUpModal from '../components/SignUpModal';
-// import SearchBar from '../components/SearchBar';
-// import LatestDrink from '../components/LatestDrink';
+import SignUpModal from '../components/SignUpModal';
+import LoginModal from '../components/LoginModal';
 
 class Search extends Component {
-
+  signUpSubmit = data => {
+    // console.log(data);
+    API.signUpSubmit(data);
+  }
   render() {
     return (
       <div>
-        {/* <div class="col-12">
-          <div class="row">             */}
-            
+        <div class="col-12">
+          <div class="row">
+            <SignUpModal
+              signUpSubmit={this.signUpSubmit}
+            />
+            <LoginModal
+              loginSubmit={this.loginSubmit}
+            />
             <Wrapper>
-            <Nav />
-            <SearchContainer />
+              <Nav />
+              <SearchContainer />
             </Wrapper>
-           
-                   
-           
-          {/* </div>
-          </div> */}
+          </div>
+        </div>
       </div>
     )
   }
