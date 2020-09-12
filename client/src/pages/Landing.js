@@ -10,43 +10,45 @@ import API from '../utils/API';
 class Landing extends Component {
 
   signUpSubmit = data => {
-    API.signUpSubmit(data).then(window.location.href = "/search");
-  }
+    API.signUpSubmit(data)
+  };
 
   loginSubmit = data => {
-    API.loginSubmit(data).then(window.location.href = "/search");;
-  }
+    API.loginSubmit(data).then((res) => {
+      console.log(res);
+    })
+}
 
-  render() {
-    return (
-      <div>
-        <div class="col-12">
-          <div class="row">
-            <SignUpModal 
+render() {
+  return (
+    <div>
+      <div class="col-12">
+        <div class="row">
+          <SignUpModal
             signUpSubmit={this.signUpSubmit}
-            />
-            <LoginModal 
+          />
+          <LoginModal
             loginSubmit={this.loginSubmit}
-            />
-            <Jumbotron />
+          />
+          <Jumbotron />
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <SearchBar />
           </div>
-          <div class="row">
-            <div class="col-12">
-              <SearchBar />
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 mb-5">
+            <LatestDrink />
           </div>
-          <div class="row">
-            <div class="col-12 col-md-6 mb-5">
-              <LatestDrink />
-            </div>
-            <div class="col-12 col-md-6 mb-5">
-              <TopShops />
-            </div>
+          <div class="col-12 col-md-6 mb-5">
+            <TopShops />
           </div>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
+}
 }
 
 export default Landing;
