@@ -8,3 +8,13 @@
     background: #F8F8F4;
     box-shadow: 15px 15px 18px rgba(0, 0, 0, 0.25);
 }
+
+@media only screen and (max-width: 900px) {
+
+    .searching {
+        background-size: 225%;
+        height: 40vh;
+    }
+
+
+}

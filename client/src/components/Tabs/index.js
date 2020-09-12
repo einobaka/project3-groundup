@@ -1,26 +1,29 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
+import ListItems from '../List';
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
 import stars from '../../img/stars/2.png';
 
 
-class Tabs extends React.Component {
-   
+class SearchTabs extends React.Component {
+
     render() {
-        
+
         return (
-            <Nav fill variant="tabs">
-                <Nav.Item>
-                    <Nav.Link eventKey="link-1" value="state">Drink</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-2">Shop</Nav.Link>
-                </Nav.Item>
-                {/* <Nav.Item>
-                    <Nav.Link eventKey="link-3">Nearest Coffee</Nav.Link>
-                </Nav.Item> */}
-            </Nav>
+            
+            <Tabs defaultActiveKey="Drink" id="uncontrolled-tab-example">                
+                <Tab eventKey="Drink" title="Drink"><br></br><ListItems />                    
+                </Tab>        
+                    
+                <Tab eventKey="Shop" title="Shop">
+                    
+                </Tab>
+                
+            </Tabs>
+            
         )
     }
 }
 
-export default Tabs;
+export default SearchTabs;
