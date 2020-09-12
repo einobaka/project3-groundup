@@ -10,7 +10,13 @@ export default {
   // Login
   loginSubmit: function (data) {
     return axios.post('/login', data);
+  },
+  // Drink data
+  getDrinkData: function(data) {
+    return axios.post('search', data);
   }
+
+
 
 
   // // Gets the book with the given id

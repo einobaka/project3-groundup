@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import Container from "../components/Container";
-import SearchForm from "../components/SearchForm";
-import SearchResults from "../components/SearchResults";
-import Alert from "../components/Alert";
+// import SearchContainer from "../components/SearchContainer";
+// import SearchForm from "../components/SearchForm";
+import ListItems from "../components/List";
+// import Alert from "../components/Alert";
 
 class Search extends Component {
   state = {
@@ -11,7 +11,7 @@ class Search extends Component {
     name: [],
     results: [],
     error: ""
-    
+
   };
 
   // When the component mounts, get a list of all available base breeds and update this.state.breeds
@@ -39,21 +39,22 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <Container style={{ minHeight: "80%" }}>
-          <h1 className="text-center">Search By Drinks!</h1>
-          <Alert
+        {/* <SearchContainer style={{ minHeight: "80%" }}>
+          <h1 className="text-center">Search By Drinks!</h1> */}
+          {/* <Alert
             type="danger"
             style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
           >
             {this.state.error}
-          </Alert>
-          <SearchForm
+          </Alert> */}
+          {/* <SearchForm
             handleFormSubmit={this.handleFormSubmit}
             handleInputChange={this.handleInputChange}
             name={this.state.name}
-          />
-          <SearchResults results={this.state.results} />
-        </Container>
+          /> */}
+          {/* <ListItems results={this.state.results} /> */}
+          {/* <p>lor</p> */}
+        {/* </SearchContainer> */}
       </div>
     );
   }
