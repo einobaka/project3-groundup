@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import API from "../utils/API";
+import API from "../../utils/API";
 // import SearchContainer from "../components/SearchContainer";
 // import SearchForm from "../components/SearchForm";
-import ListItems from "../components/List";
+import ListItems from "../List";
 // import Alert from "../components/Alert";
 
 class Search extends Component {
@@ -11,7 +11,6 @@ class Search extends Component {
     name: [],
     results: [],
     error: ""
-
   };
 
   // When the component mounts, get a list of all available base breeds and update this.state.breeds
