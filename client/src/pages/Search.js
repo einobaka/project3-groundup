@@ -6,6 +6,7 @@ import API from '../utils/API';
 import SearchContainer from "../components/SearchContainer"
 import SignUpModal from '../components/SignUpModal';
 import LoginModal from '../components/LoginModal';
+import HistoryCard from '../components/HistoryCard';
 
 class Search extends Component {
 
@@ -29,8 +30,15 @@ class Search extends Component {
               loginSubmit={this.loginSubmit}
             />
             <Wrapper>
+            <div class="col-12 col-md-6 mb-5">
               <Nav />
+              </div>
+              <div class="col-12 col-md-6 mb-5">
               <SearchContainer />
+              </div>
+              <div class="col-12 col-md-6 mb-5">
+              <HistoryCard />
+              </div>
             </Wrapper>
           </div>
         </div>
