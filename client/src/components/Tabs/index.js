@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import ListItems from '../List';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
+import SearchResult from '../SearchResult';
 import stars from '../../img/stars/2.png';
 
 
@@ -14,7 +15,7 @@ class SearchTabs extends React.Component {
             
             <Tabs defaultActiveKey="Drink" id="uncontrolled-tab-example">             
                 <Tab eventKey="Drink" title="Drink"><br></br>
-                <ListItems />                     
+                <SearchResult />                   
                 </Tab>        
                     
                 <Tab eventKey="Shop" title="Shop">

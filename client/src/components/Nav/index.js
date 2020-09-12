@@ -17,7 +17,7 @@ class Nav extends Component {
           </div>
         </Link>
         <div class="navbar-header">
-          <p class="welcome">Welcome, <span class="user">{this.props.user.username}</span>
+          <p class="welcome">Welcome, <span class="user"></span>
             <div>
               <button id="login-btn" class="btn button" data-toggle="modal" data-target="#loginModal">Login</button>
               <button id="signup-btn" class="btn button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
