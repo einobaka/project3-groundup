@@ -29,7 +29,9 @@ class Search extends Component {
               loginSubmit={this.loginSubmit}
             />
             <Wrapper>
-              <Nav />
+              <Nav 
+              user={this.props.user}
+              />
               <SearchContainer />
             </Wrapper>
           </div>

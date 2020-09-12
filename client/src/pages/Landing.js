@@ -6,16 +6,23 @@ import SearchBar from '../components/SearchBar';
 import LatestDrink from '../components/LatestDrink';
 import TopShops from '../components/TopShops';
 import API from '../utils/API';
+import { withRouter } from "react-router-dom";
 
 class Landing extends Component {
 
+
   signUpSubmit = data => {
-    API.signUpSubmit(data)
+    API.signUpSubmit(data).then(window.location.href="/search")
   };
 
   loginSubmit = data => {
     API.loginSubmit(data).then((res) => {
       console.log(res);
+      this.props.updateUser(res.data._id, res.data.username)
+      this.props.history.push("/search");
+      
+    }).catch(err => {
+      alert("Incorrect username or password");
     })
 }
 
@@ -51,4 +58,4 @@ render() {
 }
 }
 
-export default Landing;
+export default withRouter(Landing);
