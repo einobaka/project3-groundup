@@ -13,15 +13,11 @@ const SearchContainer = () => {
 
         <Card>
             <Card.Header>
-        
             <SearchBar />
             <SearchTabs />
             </Card.Header>
         </Card>
-
         </div>
-
-
 
     )
 }
