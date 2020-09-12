@@ -8,14 +8,19 @@ import SignUpModal from '../components/SignUpModal';
 import LoginModal from '../components/LoginModal';
 
 class Search extends Component {
+
   signUpSubmit = data => {
-    // console.log(data);
-    API.signUpSubmit(data);
-  }
+    API.signUpSubmit(data).then(window.location.reload());
+  };
+
+  loginSubmit = data => {
+    API.loginSubmit(data).then(window.location.reload());
+  };
+
   render() {
     return (
       <div>
-        <div class="col-12">
+        <div class="col-12"> 
           <div class="row">
             <SignUpModal
               signUpSubmit={this.signUpSubmit}

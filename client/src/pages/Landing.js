@@ -22,11 +22,11 @@ class Landing extends Component {
       <div>
         <div class="col-12">
           <div class="row">
-            <SignUpModal 
-            signUpSubmit={this.signUpSubmit}
+            <SignUpModal
+              signUpSubmit={this.signUpSubmit}
             />
-            <LoginModal 
-            loginSubmit={this.loginSubmit}
+            <LoginModal
+              loginSubmit={this.loginSubmit}
             />
             <Jumbotron />
           </div>
