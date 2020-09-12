@@ -3,8 +3,6 @@ import "./style.css";
 import SearchBar from "../SearchBar"
 import SearchTabs from "../Tabs";
 import Card from 'react-bootstrap/Card'
-import Search from '../SearchResult';
-
 
 const SearchContainer = () => {
     return (
