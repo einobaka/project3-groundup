@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import SearchBar from "../SearchBar";
+import SearchBar from "../SearchBar"
 import SearchTabs from "../Tabs";
 import Card from 'react-bootstrap/Card'
 
@@ -15,6 +15,7 @@ const SearchContainer = () => {
             <SearchTabs />
             </Card.Header>
         </Card>
+
         </div>
 
     )
