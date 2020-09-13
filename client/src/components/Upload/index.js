@@ -1,4 +1,5 @@
 import React from 'react';
+import "./style.css"
 
 class Upload extends React.Component{
   state = {
@@ -11,7 +12,7 @@ class Upload extends React.Component{
 
     const formData = new FormData();
     formData.append('file', files[0]);
-    formData.append('upload_preset', 'qvfwjbwg');
+    formData.append('upload_preset', 'dbs9tp38');
 
     const options = {
       method: 'POST',
@@ -71,7 +72,7 @@ class Upload extends React.Component{
     const { imageUrl, imageAlt } = this.state;
 
     return (
-      <main  className="App">
+      <main  className="Upload">
         <section className="left-side">
           <form>
             <div className="form-group">
