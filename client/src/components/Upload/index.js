@@ -33,7 +33,28 @@ class Upload extends React.Component{
     window.cloudinary.createUploadWidget(
       {
         cloudName: 'sbhandari',
-        uploadPreset: 'qvfwjbwg',
+        uploadPreset: 'dbs9tp38',
+        sources: [
+            "local",
+            "camera"
+        ],
+        styles: {
+            palette: {
+                window: "#464040",
+                sourceBg: "#292222",
+                windowBorder: "#c7a49f",
+                tabIcon: "#cc6600",
+                inactiveTabIcon: "#E8D5BB",
+                menuIcons: "#ebe5db",
+                link: "#ffb107",
+                action: "#ffcc00",
+                inProgress: "#99cccc",
+                complete: "#78b3b4",
+                error: "#ff6666",
+                textDark: "#61391D",
+                textLight: "#D8CFCF"
+            }
+        },
       },
       (error, { event, info }) => {
         if (event === 'success') {
