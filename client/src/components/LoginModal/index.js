@@ -29,6 +29,8 @@ class LoginModal extends Component {
             password: this.state.password
         }
         this.props.loginSubmit(data);
+        localStorage.setItem('user', data.username)
+        console.log(data.username)
     }
 
     render() {
