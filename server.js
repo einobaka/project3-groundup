@@ -40,21 +40,21 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1/groundup").then
   console.log("connected-to-database");
   // db.Drink.create({
   //   user: "5f5c603e102f8e272c984f33",
-  //   name: "coffee",
-  //   price: 5,
-  //   category: "Hot Drink",
+  //   name: "mocachino",
+  //   price: 8,
+  //   category: "Cold Drink",
   //   size: 8,
-  //   rating: 5,
+  //   rating: 3.5,
   //   logo: "https://picsum.photos/50",
-  //   review: "Awesome",
+  //   review: "Awesomer",
   //   image: "https://picsum.photos/50"
   // })
 
   // db.Shop.create({
-  //   user: "5f5c383f7715b70ed81138f1",
+  //   // user: "5f5c383f7715b70ed81138f1",
   //   name: "Starbucks",
   //   address: "123 Test Drive",
-  //   drinks: "5f5c3d18a76901144133bd77"
+  //   // drinks: "5f5c3d18a76901144133bd77"
   // })
 
 }).catch((err) => {

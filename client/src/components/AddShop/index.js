@@ -26,8 +26,9 @@ class ShopModal extends Component {
     addShop() {
         const shop = {
             name: this.state.name,
-            image: ""
+            logo: ""
         }
+        // console.log(shop);
         API.addShop(shop)
     }
 

@@ -17,13 +17,13 @@ export default {
   },
   
   addShop: function(data) {
+    // console.log(data)
     return axios.post('/api/shop', data);
   },
 
   getShopData: function(data) {
     return axios.get('/api/shop', data);
   }
-
 
   // // Gets the book with the given id
   // getBook: function(id) {
@@ -37,4 +37,5 @@ export default {
   // saveBook: function(bookData) {
   //   return axios.post("/api/books", bookData);
   // }
+
 };
