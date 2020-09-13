@@ -13,12 +13,11 @@ class Search extends Component {
     error: ""
   };
 
-  // When the component mounts, get a list of all available base breeds and update this.state.breeds
   componentDidMount() {
     API.getDrinkData()
       .then(res => {
         this.setState({ results: res.data })
-        console.log(this.state.results)
+        // console.log(this.state.results)
       })
       .catch(err => console.log(err));
   }

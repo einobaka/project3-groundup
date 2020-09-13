@@ -27,7 +27,6 @@ module.exports = {
   // Creates a new drink record
   
   create: function(req, res) {
-
     db.Drink
       .create(req.body)
       .then(dbDrinks => res.json(dbDrinks))
