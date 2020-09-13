@@ -40,7 +40,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1/groundup").then
   console.log("connected-to-database");
   // db.Drink.create({
   //   user: "5f5c603e102f8e272c984f33",
-  //   name: "coffee",
+  //   name: "mocachino",
   //   price: 8,
   //   category: "Cold Drink",
   //   size: 8,
