@@ -13,7 +13,7 @@ class SearchResult extends Component {
     error: ""
   };
 
-  searchEntry = entry => {
+  searchEntry = entry => { // entry is the word from the search bar
     console.log(entry)
     API.getDrinkData()
       .then(res => {
