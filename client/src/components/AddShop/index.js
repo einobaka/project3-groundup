@@ -7,7 +7,7 @@ class ShopModal extends Component {
         super(props);
         this.state = {
             name: "",
-            image: ""
+            image: "",
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -58,6 +58,7 @@ class ShopModal extends Component {
                             <button
                                 type="button"
                                 class="btn modal-button"
+                                data-dismiss="modal"
                                 onClick={() => this.addShop()}
                             >Add</button>
                         </div>
