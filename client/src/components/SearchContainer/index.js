@@ -16,7 +16,6 @@ const SearchContainer = () => {
             <SearchTabs />
             </Card.Header>
         </Card>
-        <Upload/>
         </div>
 
     )
