@@ -4,10 +4,8 @@ const drinkController = require("../../controllers/drinkController");
 // Matches with "/api/drink"
 router.route("/")
   .get(drinkController.findAll)
-  .post(drinkController.create)
-  // .get(drinkController.findByName);
+  .post(drinkController.create);
 
-// Matches with "/api/drinks/:id"
 router
   .route("/:id")
   .get(drinkController.findById)
