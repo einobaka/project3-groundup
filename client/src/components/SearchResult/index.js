@@ -3,59 +3,46 @@ import API from "../../utils/API";
 // import SearchContainer from "../components/SearchContainer";
 // import SearchForm from "../components/SearchForm";
 import ListItems from "../DrinkList";
+import SearchBar from '../SearchBar'
 
-class Search extends Component {
+class SearchResult extends Component {
   state = {
-    search: "",
-    results: [],
+    // search: "",
+    searchResults: [],
+    filterdResults: [],
     error: ""
   };
 
-  componentDidMount() {
+  searchEntry = entry => {
+    console.log(entry)
     API.getDrinkData()
       .then(res => {
-        // console.log(res);
-        this.setState({ results: res.data })
-        // console.log(this.state.results)
+        console.log(res.data);
+        // data is coming in, just need to filter it to filteredResults state, right now there is nothing rendering because filteredResults is empty
       })
       .catch(err => console.log(err));
   }
 
-  // handleInputChange = event => {
-  //   this.setState({ search: event.target.value });
-  // };
-
-  // handleFormSubmit = event => {
-  //   event.preventDefault();
-  //   API.getDrinksList(this.state.search)
-  //     .then(res => {
-  //       if (res.data.status === "error") {
-  //         throw new Error(res.data);
-  //       }
-  //       this.setState({ results: res.data, error: "" });
-  //     })
-  //     .catch(err => this.setState({ error: err.message }));
-  // };
-
   render() {
     return (
-      <ul className="list-group search-results">
-      {
-        this.state.results.map(result => (
-          <ListItems 
-          name={result.name}
-          category={result.category} 
-          name={result.name} 
-          size={result.size}
-          price={result.price}
-          rating={result.rating} 
-          logo={result.logo}
-          />
-        ))
-      }
+
+      <ul className="list-group search-results" >
+        <SearchBar searchEntry={this.searchEntry} />
+        {
+          this.state.filterdResults.map(result => (
+            <ListItems
+              name={result.name}
+              category={result.category}
+              name={result.name}
+              size={result.size}
+              price={result.price}
+              rating={result.rating}
+              logo={result.logo}
+            />
+          ))
+        }
       </ul>
     );
   }
 }
-
-export default Search;
+export default SearchResult;

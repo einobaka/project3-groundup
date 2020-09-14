@@ -7,16 +7,16 @@ const db = require("../models");
 module.exports = {
 
   // Returns all drinks
-  findAll: function(req, res) {
+  findAll: function (req, res) {
     db.Drink
-      .find({shop:req.body.shop})
+      .find({ shop: req.body.shop })
       .populate("shop")
       .then(dbDrinks => res.json(dbDrinks))
       .catch(err => res.status(422).json(err));
   },
-  
+
   // Returns a single drink
-  findById: function(req, res) {
+  findById: function (req, res) {
     db.Drink
       .findById(req.params.id)
       .populate("shop")
@@ -24,40 +24,30 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
-  // findByName: function(req, res) {
-  //   db.Drink
-  //     .findByName(req.params.name)
-  //     .populate("shop")
-  //     .then(dbDrinks => res.json(dbDrinks))
-  //     .catch(err => res.status(422).json(err));
-  // },
-
   // Creates a new drink record
-  
-  create: function(req, res) {
+  create: function (req, res) {
     db.Drink
       .create(req.body)
       .then(dbDrinks => res.json(dbDrinks))
-        // db.Shop.findOneAndUpdate({ _id: req.body.shop }, { $push: { drinks: dbDrinks._id }})
-        // .then(dbDrinks => res.json(dbDrinks));
-        // console.log(dbDrinks)
-      
+      // db.Shop.findOneAndUpdate({ _id: req.body.shop }, { $push: { drinks: dbDrinks._id }})
+      // .then(dbDrinks => res.json(dbDrinks));
+      // console.log(dbDrinks)
       .catch(err => res.status(422).json(err));
   },
 
   // Finds and updates a drink
-  update: function(req, res) {
+  update: function (req, res) {
     db.Drink
-      .findOneAndUpdate({ _id: req.params.id }, req.body, {new:true})
+      .findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
       .then(dbDrinks => res.json(dbDrinks))
       .catch(err => res.status(422).json(err));
   },
 
   // Removes a drink
-  remove: function(req, res) {
+  remove: function (req, res) {
     db.Drink
       .findById({ _id: req.params.id })
-      .then(dbDrinks =>  dbDrinks.remove())
+      .then(dbDrinks => dbDrinks.remove())
       .then(dbDrinks => res.json(dbDrinks))
       .catch(err => res.status(422).json(err));
   }

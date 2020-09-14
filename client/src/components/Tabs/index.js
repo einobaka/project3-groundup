@@ -18,8 +18,8 @@ class SearchTabs extends React.Component {
                     <SearchResult />
                 </Tab>
 
-                <Tab eventKey="Shop" title="Shop">
-
+                <Tab eventKey="Shop" title="Shop"><br></br>
+                    <SearchResult />
                 </Tab>
 
             </Tabs>
