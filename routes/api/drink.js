@@ -6,7 +6,6 @@ router.route("/")
   .get(drinkController.findAll)
   .post(drinkController.create);
 
-// Matches with "/api/drinks/:id"
 router
   .route("/:id")
   .get(drinkController.findById)

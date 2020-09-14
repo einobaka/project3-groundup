@@ -16,8 +16,9 @@ class Landing extends Component {
   };
 
   loginSubmit = data => {
+    // console.log(data)
     API.loginSubmit(data).then((res) => {
-      console.log(res);
+      // console.log(res);
       this.props.updateUser(res.data._id, res.data.username)
       this.props.history.push("/search");
       

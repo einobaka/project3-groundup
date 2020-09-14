@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import API from '../../utils/API';
+import Upload from '../Upload'
 
 class ShopModal extends Component {
     constructor(props) {
@@ -49,8 +50,10 @@ class ShopModal extends Component {
                                     <label for="shopNameInput">Shop Name:</label>
                                     <input class="form-control mb-2" type="text" id="shopNameInput" name="name" onChange={this.handleInputChange}></input>
                                     <label for="uploadBtn">Logo:</label>
-                                    <button id="uploadBtn" class="ml-3 btn btn-primary">Upload</button>
+                                    
+                                    {/* <button id="uploadBtn" class="ml-3 btn btn-primary">Upload</button> */}
                                     <small class="mt-1"><p>If you have the shop logo, we'd love for you to upload it!</p></small>
+                                    <Upload />
                                 </div>
                             </form>
                         </div>

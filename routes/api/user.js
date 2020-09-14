@@ -12,32 +12,45 @@ module.exports = function (app) {
     // })
 
     // Register User
-    app.post('/register', function (req, res) {
+    app.post('/register', async function (req, res) {
 
-        // console.log(req.body);
+    //     try {
+    //         let user = await db.User.findOne({ email: req.body.email });
+    //         if (user) {
+    //             return res.status(400).json({ errors: [{ msg: "User already exists" }] })
+    //             // console.log(req.body);
 
-        var newUser = new db.User({
-            name: req.body.name,
-            email: req.body.email,
-            username: req.body.username,
-            password: req.body.password
-        });
 
-        db.User.createUser(newUser, function (err, user) {
-            if (err) throw err;
-            res.send(user);
-        });
 
+    //             // Return jsonwebtoken
+    //             // res.send('User registered')
+    // }
+    var newUser = new db.User({
+        name: req.body.name,
+        email: req.body.email,
+        username: req.body.username,
+        password: req.body.password
     });
-    // Endpoint to login
-    app.post('/login',
-        passport.authenticate('local'),
-        function (req, res) {
-            // console.log(req.body);
-            res.send(req.user);
-            // add send for rendering page when logged in
-          }
-    );
+
+    db.User.createUser(newUser, function (err, user) {
+        if (err) throw err;
+
+        const { name, email } = user;
+        console.log({ name, email})
+        res.send(user);
+    });
+    }
+    
+    ),
+        // Endpoint to login
+        app.post('/login',
+            passport.authenticate('local'),
+            function (req, res) {
+                // console.log(req.body);
+                res.send(req.user);
+                // add send for rendering page when logged in
+            }
+        );
 
     // Endpoint to get current user
     app.get('/user', function (req, res) {

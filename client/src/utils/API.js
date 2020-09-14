@@ -11,10 +11,17 @@ export default {
   loginSubmit: function (data) {
     return axios.post('/login', data);
   },
+
   // Drink data
   getDrinkData: function(data) {
     return axios.get('/api/drink', data);
   },
+
+  // // Drink name
+  // getDrinkName: function(name) {
+  //   // console.log(name)
+  //   return axios.get('/api/drink', name);
+  // },
   
   addShop: function(data) {
     // console.log(data)
