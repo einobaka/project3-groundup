@@ -8,10 +8,11 @@ class ShopModal extends Component {
         super(props);
         this.state = {
             name: "",
-            image: ""
+            image: "",
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.logoUpload = this.logoUpload.bind(this);
     }
 
     handleInputChange(event) {
@@ -24,13 +25,21 @@ class ShopModal extends Component {
         });
     }
 
+    logoUpload(url) {
+        this.setState({
+            image: url
+        })
+    }
+
     addShop() {
-        const shop = {
-            name: this.state.name,
-            logo: ""
+        if (this.state.name) {
+            const shop = {
+                name: this.state.name,
+                logo: this.state.image,
+                drinks: []
+            }
+            API.addShop(shop).then(this.props.updateShops())
         }
-        // console.log(shop);
-        API.addShop(shop)
     }
 
     render() {
@@ -50,10 +59,11 @@ class ShopModal extends Component {
                                     <label for="shopNameInput">Shop Name:</label>
                                     <input class="form-control mb-2" type="text" id="shopNameInput" name="name" onChange={this.handleInputChange}></input>
                                     <label for="uploadBtn">Logo:</label>
-                                    
-                                    {/* <button id="uploadBtn" class="ml-3 btn btn-primary">Upload</button> */}
+                                    <Upload 
+                                    logoUpload={this.logoUpload}
+                                    />
                                     <small class="mt-1"><p>If you have the shop logo, we'd love for you to upload it!</p></small>
-                                    <Upload />
+
                                 </div>
                             </form>
                         </div>
@@ -61,6 +71,7 @@ class ShopModal extends Component {
                             <button
                                 type="button"
                                 class="btn modal-button"
+                                data-dismiss="modal"
                                 onClick={() => this.addShop()}
                             >Add</button>
                         </div>

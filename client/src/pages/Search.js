@@ -11,6 +11,25 @@ import AddModal from '../components/AddModal';
 import ShopModal from '../components/AddShop';
 
 class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      shops: []
+    }
+
+    this.updateShops = this.updateShops.bind(this);
+  }
+
+  updateShops() {
+    API.getShopData().then(data => {
+      this.setState({ shops: data.data });
+      console.log(this.state.shops);
+    })
+  }
+
+  addDrink(drink) {
+    API.addDrink(drink)
+  }
 
   signUpSubmit = data => {
     API.signUpSubmit(data).then(window.location.reload());
@@ -23,7 +42,7 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <div class="col-12"> 
+        <div class="col-12">
           <div class="row">
             <SignUpModal
               signUpSubmit={this.signUpSubmit}
@@ -31,17 +50,22 @@ class Search extends Component {
             <LoginModal
               loginSubmit={this.loginSubmit}
             />
-            <AddModal />
-            <ShopModal />
+            <AddModal 
+            updateShops={this.updateShops}
+            shops={this.state.shops}
+            />
+            <ShopModal 
+            updateShops={this.updateShops}
+            />
             <Wrapper>
-            <div class="col-12 col-md-6 mb-5">
-              <Nav />
+              <div class="col-12 col-md-6 mb-5">
+                <Nav />
               </div>
               <div class="col-12 col-md-6 mb-5">
-              <SearchContainer />
+                <SearchContainer />
               </div>
               <div class="col-12 col-md-6 mb-5">
-              <HistoryCard />
+                <HistoryCard />
               </div>
             </Wrapper>
           </div>

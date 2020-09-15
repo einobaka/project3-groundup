@@ -38,17 +38,7 @@ app.use(routes);
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/groundup").then(() => {
   console.log("connected-to-database");
-  // db.Drink.create({
-  //   user: "5f5ef4f640d61c2a81880adf",
-  //   name: "water",
-  //   price: 1,
-  //   category: "Cold Drink",
-  //   size: 8,
-  //   rating: 2,
-  //   logo: "https://picsum.photos/50",
-  //   review: "Awesomer",
-  //   image: "https://picsum.photos/50"
-  // })
+ 
 
   // db.Shop.create({
   //   // user: "5f5c383f7715b70ed81138f1",
