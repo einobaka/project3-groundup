@@ -31,12 +31,13 @@ class Search extends Component {
     API.addDrink(drink)
   }
 
-  signUpSubmit = data => {
+  signUpSubmit = (data) => {
     API.signUpSubmit(data).then(window.location.reload());
   };
 
   loginSubmit = data => {
     API.loginSubmit(data).then(window.location.reload());
+    API.signUpSubmit(data).then(console.log(data));
   };
 
   render() {
