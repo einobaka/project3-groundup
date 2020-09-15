@@ -5,6 +5,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import SearchResult from '../SearchResult';
 import stars from '../../img/stars/2.png';
+import "./style.css"
 
 
 class SearchTabs extends React.Component {
