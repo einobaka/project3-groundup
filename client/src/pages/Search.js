@@ -12,12 +12,13 @@ import ShopModal from '../components/AddShop';
 
 class Search extends Component {
 
-  signUpSubmit = data => {
+  signUpSubmit = (data) => {
     API.signUpSubmit(data).then(window.location.reload());
   };
 
   loginSubmit = data => {
     API.loginSubmit(data).then(window.location.reload());
+    API.signUpSubmit(data).then(console.log(data));
   };
 
   render() {

@@ -45,7 +45,12 @@ class SignUpModal extends Component {
                     username: this.state.username,
                     password: this.state.password,
                     passwordConfirm: this.state.passwordConfirm
+                }).then(data => {
+                    // store the user in localStorage
+                    localStorage.setItem('Cesar', "Cesar")
+                    console.log(data)
                 })
+
             } else {
                 this.setState({ passwordDisplay: "block" })
             }
@@ -53,7 +58,7 @@ class SignUpModal extends Component {
             this.setState({ fieldsDisplay: "block" })
         }
 
-          
+
     }
 
     render() {
