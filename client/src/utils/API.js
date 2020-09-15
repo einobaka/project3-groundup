@@ -17,6 +17,10 @@ export default {
     return axios.get('/api/drink', data);
   },
 
+  addDrink: function(data) {
+    return axios.post('/api/drink', data);
+  },
+
   // // Drink name
   // getDrinkName: function(name) {
   //   // console.log(name)

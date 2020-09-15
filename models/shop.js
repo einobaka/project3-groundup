@@ -10,13 +10,13 @@ const shopSchema = new Schema(
     // },
     name: { type: String, required: true },
     // address: { type: String, required: true },
-    logo: { data: Buffer, contentType: String },
-    // drinks: [
-    //   {
-    //     type: Schema.Types.ObjectId,
-    //     ref: "drink"
-    //   }
-    // ]
+    logo: { type: String },
+    drinks: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "drink"
+      }
+    ]
   });
 
 const Shop = mongoose.model("Shop", shopSchema);

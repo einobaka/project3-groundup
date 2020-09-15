@@ -26,10 +26,14 @@ module.exports = {
 
   // Creates a new drink record
   create: function (req, res) {
+    console.log(req.body)
     db.Drink
       .create(req.body)
-      .then(dbDrinks => res.json(dbDrinks))
-      // db.Shop.findOneAndUpdate({ _id: req.body.shop }, { $push: { drinks: dbDrinks._id }})
+      .then(dbDrinks => {
+        console.log(dbDrinks)
+        db.Shop.findOneAndUpdate({ _id: req.body.shop }, { $push: { drinks: dbDrinks._id }})
+        .then(dbShop => false)
+      })
       // .then(dbDrinks => res.json(dbDrinks));
       // console.log(dbDrinks)
       .catch(err => res.status(422).json(err));

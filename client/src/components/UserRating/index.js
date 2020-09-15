@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import "./style.css";
 import ReactStars from "react-rating-stars-component";
 import empty from '../../img/empty.png';
@@ -13,7 +13,7 @@ secondExample = {
   count: 5,
   color: "brown",
   activeColor: "gold",
-  value: 3.5,
+  value: 5,
   a11y: true,
   isHalf: true,
   
@@ -21,7 +21,7 @@ secondExample = {
   halfIcon: <img class="cup" src={half} />,
   filledIcon: <img class="cup" src={full} />,
   onChange: newValue => {
-    console.log(`Example 2: new value is ${newValue}`);
+    this.props.updateStars(newValue);
   }
 }
 

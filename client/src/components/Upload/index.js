@@ -59,10 +59,7 @@ class Upload extends React.Component{
       },
       (error, { event, info }) => {
         if (event === 'success') {
-          this.setState({
-            imageUrl: info.secure_url,
-            imageAlt: `An image of ${info.original_filename}`
-          })
+          this.props.logoUpload(info.secure_url)
         }
       },
     ).open();

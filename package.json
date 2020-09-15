@@ -29,6 +29,7 @@
     "mapbox-gl": "^1.12.0",
     "mongoose": "^5.3.16",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "react-currency-input": "^1.3.6"
   }
 }
