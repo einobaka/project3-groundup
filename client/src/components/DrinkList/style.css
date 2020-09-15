@@ -1,18 +1,94 @@
 .list-group-item {
-  height: 100px;
   position: relative;
-    display: block;
-    padding: 2.5rem 1.25rem;
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,.125);
+  display: inline;
+
+    
 }
-.list-overflow-container {
+.logo {
+  border-radius: 50%;
+  float: left;
+  padding: 5px;
+  
+}
+
+.everything {
+      white-space: nowrap;
+}
+   
+.everything *{
+    display: inline;
+   
+}
+
+.detail {
+  white-space: nowrap;
+}
+.drink-type {
+  text-align: center; 
+  border-bottom: 1px solid; 
+  
+  
+
+}
+
+.category {  
+  padding:  5px;
+  border: 5px;
+  font-size: 20px;
+  position: relative;
+  /* left: 10px; */
+  margin: 100px;
+  height: 20px;  
+  /* border-bottom: 2px solid; */
+  
+}
+.drink-details {
+  padding:  5px;
+  border: 5px;
+  font-size: 15px;
+  position: relative;
+  /* left: 10px; */
+  margin: auto 100px auto 110px;
+  height: 10px; 
+}
+
+.drink-price {
+  text-align: center; 
+  border-bottom: 1px solid; 
+  border-left: 1px solid;
+  float: right;
+  
+}
+.price {
+  padding:  5px;
+  border: 5px;
+  font-size: 15px;
+  position: relative;
+  left: 10px;
+  margin: auto 100px auto 100px;
+  height: 10px; 
+  
+ }
+.drink-ratings {
+  float: right;
+  padding:  5px;
+  border: 5px;
+  font-size: 15px;
+  position: relative;
+  /* left: 10px; */
+  margin: auto 50px auto 45px;
+  height: 10px; 
+}
+
+
+
+/* .list-overflow-container {
   max-height: 545px;
   border: 1px #DDDDDD solid;
   border-radius: 4px;
   overflow-y: scroll;
   overflow-x: hidden;
-}
+} */
 
 .list-overflow-container ul {
   margin: 0;
