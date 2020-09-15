@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 import logo from '../../img/Logo_White.svg';
+import Welcome from "../Welcome"
 // import Navbar from 'react-bootstrap/Navbar';
 
 
@@ -22,12 +23,13 @@ class Nav extends Component {
               <button id="login-btn" class="btn button" data-toggle="modal" data-target="#loginModal">Login</button>
               <button id="signup-btn" class="btn button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
             </div>
-            {/* <div class="col-6 col-sm-4 col-lg-3">
+            <Welcome/>
+            <div class="col-6 col-sm-4 col-lg-3">
               
             </div>
             <div class="col-6 col-sm-4 col-lg-3">
               
-            </div> */}
+            </div>
           </p>
         </div>
       </nav>
