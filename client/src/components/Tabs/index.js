@@ -1,11 +1,13 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
-import ListItems from '../DrinkList';
+// import ListItems from '../DrinkList';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
-import SearchResult from '../SearchResult';
-import stars from '../../img/stars/2.png';
-import "./style.css"
+
+import FilteredResultForDrink from '../SearchResultForDrink';
+import FilteredResultForShop from '../SearchResultForShop';
+// import stars from '../../img/stars/2.png';
+
 
 
 class SearchTabs extends React.Component {
@@ -16,11 +18,11 @@ class SearchTabs extends React.Component {
 
             <Tabs defaultActiveKey="Drink" id="uncontrolled-tab-example">
                 <Tab eventKey="Drink" title="Drink"><br></br>
-                    <SearchResult />
+                    <FilteredResultForDrink />
                 </Tab>
 
                 <Tab eventKey="Shop" title="Shop"><br></br>
-                    <SearchResult />
+                    <FilteredResultForShop />
                 </Tab>
 
             </Tabs>

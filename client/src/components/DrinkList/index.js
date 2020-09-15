@@ -3,7 +3,7 @@ import "./style.css";
 import StaticRating from "../StaticRating"
 
 function ListItems(props) {
-  // console.log(props)
+  console.log(props)
   return (
     <li key={props.name} className="list-group-item">
       <div class="everything">

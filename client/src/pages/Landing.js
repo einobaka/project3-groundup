@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Jumbotron from '../components/Jumbotron';
 import SignUpModal from '../components/SignUpModal';
 import LoginModal from '../components/LoginModal';
-import SearchBar from '../components/SearchBar';
+// import SearchBar from '../components/SearchBar';
 import LatestDrink from '../components/LatestDrink';
 import TopShops from '../components/TopShops';
 import API from '../utils/API';
@@ -42,7 +42,7 @@ render() {
         </div>
         <div class="row">
           <div class="col-12">
-            <SearchBar />
+            {/* <SearchBar /> */}
           </div>
         </div>
         <div class="row">
