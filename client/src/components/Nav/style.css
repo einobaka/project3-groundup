@@ -14,9 +14,8 @@ border-radius: 11px;
 position: absolute;
 width: 305px;
 height: 98px;
-left: 886px;
+left: 650px;
 top: 62px;
-
 font-family: Roboto;
 font-style: normal;
 font-weight: 650;
@@ -27,7 +26,6 @@ color: #F0F0E3;
 
 text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
 }
-
 
 .button {
     background: transparent;
@@ -69,7 +67,6 @@ top: 5px;
 filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.33));
 border-radius: 11px; 
     }
-
 
     #login-btn {
         width: 127px;

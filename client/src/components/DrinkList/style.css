@@ -1,7 +1,6 @@
 .list-group-item {
   position: relative;
   display: inline;
-
     
 }
 .logo {
@@ -13,6 +12,7 @@
 
 .everything {
       white-space: nowrap;
+      justify-content: center;
 }
    
 .everything *{
@@ -26,9 +26,7 @@
 .drink-type {
   text-align: center; 
   border-bottom: 1px solid; 
-  
-  
-
+  position: relative;
 }
 
 .category {  
@@ -37,18 +35,19 @@
   font-size: 20px;
   position: relative;
   /* left: 10px; */
-  margin: 100px;
+  margin: auto 100px;
   height: 20px;  
   /* border-bottom: 2px solid; */
   
 }
 .drink-details {
+  top: -10px;
   padding:  5px;
   border: 5px;
   font-size: 15px;
   position: relative;
   /* left: 10px; */
-  margin: auto 100px auto 110px;
+  margin: auto 50px;
   height: 10px; 
 }
 
@@ -60,27 +59,28 @@
   
 }
 .price {
-  padding:  5px;
+  top: -15px;
+  padding:  15px;
+  /* margin: 5px; */
   border: 5px;
-  font-size: 15px;
+  /* font-size: 15px; */
   position: relative;
-  left: 10px;
-  margin: auto 100px auto 100px;
+  left: 100px;
+  /* margin: auto 150px auto 100px; */
   height: 10px; 
   
  }
 .drink-ratings {
+  top: -30px;
   float: right;
   padding:  5px;
   border: 5px;
-  font-size: 15px;
+  /* font-size: 15px; */
   position: relative;
   /* left: 10px; */
-  margin: auto 50px auto 45px;
-  height: 10px; 
+  margin: auto 70px auto 70px;
+  /* height: 10px;  */
 }
-
-
 
 /* .list-overflow-container {
   max-height: 545px;
