@@ -1,0 +1,23 @@
+#search-bar {
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#search-bar::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #b6b6b6;
+    opacity: 1; /* Firefox */
+}
+  
+#search-bar:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #b6b6b6;
+}
+  
+#search-bar::-ms-input-placeholder { /* Microsoft Edge */
+    color: #b6b6b6;
+}
+
+.form-control {
+
+    width: 790px;
+    max-width: 790px;
+}

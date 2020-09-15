@@ -3,7 +3,7 @@ import "./style.css";
 // import SearchBar from "../SearchBar"
 import SearchTabs from "../Tabs";
 import Card from 'react-bootstrap/Card'
-import Upload from '../Upload'
+// import Upload from '../Upload'
 
 const SearchContainer = () => {
     return (

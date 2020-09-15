@@ -3,7 +3,7 @@ import React from "react";
 import StaticRating from "../StaticRating"
 
 function ListItems(props) {
-  // console.log(props)
+  console.log(props)
   return (
     <li key={props.name} className="list-group-item">
       <span><img alt="logo" src={props.logo} className="img-fluid" /></span>
