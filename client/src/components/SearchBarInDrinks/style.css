@@ -15,9 +15,3 @@
 #search-bar::-ms-input-placeholder { /* Microsoft Edge */
     color: #b6b6b6;
 }
-
-.form-control {
-
-    width: 790px;
-    max-width: 790px;
-}
