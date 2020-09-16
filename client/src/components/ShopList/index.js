@@ -25,7 +25,7 @@ function ListItems(props) {
   return (
     <li key={props.name} className="list-group-item">
       <div class='row justify-content-center'>
-        <div class='col-lg-2 col-sm-2'><img alt="shoplogo" src={props.logo} className="img-fluid" class='logo' /></div>
+        <div class='col-lg-2 col-sm-2'><img alt="shoplogo" src={props.logo} className="img-fluid" class='shopLogo logo' /></div>
         <div class='col-lg-6 col-sm-6'>
           <div class='shopname row-lg-5 row-sm-5'>{props.name}</div>
           <div class='address row-lg-5 row-sm-5'> {props.address}</div>
