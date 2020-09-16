@@ -18,11 +18,22 @@ function WelcomeButton() {
     // if (user) {
     //     return <div>{loggedInUser} is loggged in</div>;
     // } else {}
+
+
+    // if (isLoggedIn) {
+    //     <div className="authentication">
+    //       <button>Logout</button>
+    //     </div>
+    //   } else {
+    //     <a href='http://localhost:8888'>
+    //       <button>Login</button>
+    //     </a>
+  
+
     return (<div class="navbar-header">
         <p class="welcome">Welcome: <span class="user"></span>
             <div class="col-sm-4 col-lg-12">
-                <button id="login-btn" class="btn button" data-toggle="modal" data-target="#loginModal">Login</button>  
-                <button id="signup-btn" class="btn button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
+                <button id="logout-btn" class="btn button" data-toggle="modal" data-target="#loginModal">LogOut</button>  
             </div>
         </p>
     </div>

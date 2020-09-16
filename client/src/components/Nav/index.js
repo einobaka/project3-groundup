@@ -3,7 +3,7 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import logo from '../../img/Logo_White.svg';
 import Welcome from "../Welcome"
-// import Navbar from 'react-bootstrap/Navbar';
+import Navbar from 'react-bootstrap/Navbar';
 
 
 class Nav extends Component {
@@ -17,13 +17,12 @@ class Nav extends Component {
             <img id="nav-logo" src={logo} />
           </div>
         </Link>
-
         <div class="navbar-header">
-          <Welcome />
-          <div class="col-6 col-sm-4 col-lg-3">
-          </div>
-          <div class="col-6 col-sm-4 col-lg-3">
-          </div>
+            <Welcome />
+            <div class="col-6 col-sm-4 col-lg-3">
+            </div>
+            <div class="col-6 col-sm-4 col-lg-3">
+            </div>
         </div>
       </nav>
 
