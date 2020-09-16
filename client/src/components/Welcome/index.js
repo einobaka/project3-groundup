@@ -30,7 +30,7 @@ function WelcomeButton() {
     //       <button>Login</button>
     //     </a>
   const logout = () => {
-      window.location.href = 'http://localhost:3000';
+      window.location.href = '/';
   }
 
     return (<div class="navbar-header">
