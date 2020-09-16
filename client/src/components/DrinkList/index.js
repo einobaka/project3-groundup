@@ -1,11 +1,12 @@
 import React from "react";
-import "./style.css";
 import StaticRating from "../StaticRating"
 import { OverlayTrigger, Popover, Button } from 'react-bootstrap';
+import "./style.css";
 
 function ListItems(props) {
 
   const popover = (
+
     <Popover id="popover-basic">
       <Popover.Title ><img class="drink-image" src={props.image}></img></Popover.Title>
       <Popover.Content>
@@ -25,8 +26,9 @@ function ListItems(props) {
 
     <li key={props.name} className="list-group-item">
       <div class="everything">
+
         <span><img alt="logo" src={props.logo} className="img-fluid" class="logo" onError={(e)=>{e.target.onerror = null; e.target.src=""}} /></span>
-        
+
         <card >
           <div class="drink-type">
             <h1 class="category">{props.name}</h1>
