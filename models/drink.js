@@ -12,6 +12,7 @@ const drinkSchema = new Schema({
   category: { type: String },
   size: { type: String },
   rating: { type: Number },
+  logo: { type: String },
   // logo: {
   //   type: Schema.Types.ObjectId,
   //   ref: "shop"
