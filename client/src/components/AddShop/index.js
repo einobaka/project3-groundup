@@ -9,6 +9,7 @@ class ShopModal extends Component {
         this.state = {
             name: "",
             image: "",
+            address: "",
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -46,6 +47,7 @@ class ShopModal extends Component {
         if (this.state.name && this.state.image) {
             const shop = {
                 name: this.state.name,
+                address: this.state.address,
                 logo: this.state.image,
                 drinks: []
             }
@@ -69,6 +71,8 @@ class ShopModal extends Component {
                                 <div class="form-group">
                                     <label for="shopNameInput">Shop Name:</label>
                                     <input class="form-control mb-2" type="text" id="shopNameInput" name="name" onChange={this.handleInputChange}></input>
+                                    <label for="addressInput">Address:</label>
+                                    <input class="form-control mb-2" type="text" id="addressInput" name="address" onChange={this.handleInputChange}></input>
                                     <label for="uploadBtn">Logo:</label>
                                     <Upload
                                         logoUpload={this.logoUpload}

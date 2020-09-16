@@ -11,7 +11,7 @@ const shopSchema = new Schema(
     //   required: true,
     // },
     name: { type: String, required: true },
-    // address: { type: String, required: true },
+    address: { type: String, required: true },
     logo: { type: String, required: true },
     drinks: [
       {

@@ -37,7 +37,7 @@ module.exports = {
       // user: req.user._id, //need to incorporate ***
       name: req.body.name,
       logo: req.body.logo,
-      // address: req.body.address,
+      address: req.body.address,
     })
       // .then((dbShops) => {
       //   db.User.findByIdAndUpdate(
