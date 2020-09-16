@@ -8,10 +8,10 @@ class DBdrinks extends Component {
     originalResults: [],
     displayResults: [],
     shopResults: [],
+    shops: this.props.shops
   };
   componentDidMount() {
     API.getDrinkData().then(results => {
-      console.log(results.data)
       const searchResult = results.data.map((res, i) => (
         {
           name: res.name,
@@ -19,7 +19,7 @@ class DBdrinks extends Component {
           category: res.category,
           size: res.size,
           rating: res.rating,
-          logo: "https://res.cloudinary.com/dwah9rpyx/image/upload/v1600241620/Logo_White.fad02b4b_qvfe5e.svg",
+          logo: res.logo,
           review: res.review,
           image: res.image,
           shop: res.shop,

@@ -6,10 +6,12 @@ import "./style.css";
 function ListItems(props) {
 
   const popover = (
-    <Popover id="popover-drink">
-      <Popover.Title as="h3">{props.rating} Coffee Stars</Popover.Title>
+
+    <Popover id="popover-basic">
+      <Popover.Title ><img class="drink-image" src={props.image}></img></Popover.Title>
       <Popover.Content>
         {props.review}
+        
       </Popover.Content>
     </Popover>
   );
@@ -24,7 +26,8 @@ function ListItems(props) {
 
     <li key={props.name} className="list-group-item">
       <div class="everything">
-        <span><img alt="logo" src={props.logo} className="img-fluid" class="logo" /></span>
+
+        <span><img alt="logo" src={props.logo} className="img-fluid" class="logo" onError={(e)=>{e.target.onerror = null; e.target.src=""}} /></span>
 
         <card >
           <div class="drink-type">

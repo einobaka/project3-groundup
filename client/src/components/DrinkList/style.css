@@ -6,11 +6,11 @@
 }
 
 .logo {
-  border-radius: 50%;
   float: left;
   padding: 5px;
   height: 120px;
   width: 120px;
+
 }
 
 .everything {
@@ -53,6 +53,11 @@
   margin: auto 5px;
   height: 10px; 
   background: #eeebe8;
+}
+
+.drink-image {
+  width: 200px;
+  height: auto;
 }
 
 /* .drink-price {
