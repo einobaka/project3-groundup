@@ -38,14 +38,6 @@ app.use(routes);
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/groundup").then(() => {
   console.log("connected-to-database");
- 
-
-  // db.Shop.create({
-  //   // user: "5f5c383f7715b70ed81138f1",
-  //   name: "Starbucks",
-  //   address: "123 Test Drive",
-  //   // drinks: "5f5c3d18a76901144133bd77"
-  // })
 
 }).catch((err) => {
   console.log("couldn't-connect")
