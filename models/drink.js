@@ -10,7 +10,7 @@ const drinkSchema = new Schema({
   logo: { type: String },
   review: { type: String },
   image: { type: String },
-  shosp: { type: String },
+  shop: { type: String },
 });
 
 const Drink = mongoose.model("Drink", drinkSchema);
