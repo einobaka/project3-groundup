@@ -63,7 +63,9 @@ class Search extends Component {
                 <Nav />
               </div>
               <div class="col-12 col-md-6 mb-5">
-                <SearchContainer />
+                <SearchContainer 
+                shops={this.state.shops}
+                />
               </div>
               <div class="col-12 col-md-6 mb-5">
                 <HistoryCard />

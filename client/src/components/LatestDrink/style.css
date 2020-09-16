@@ -27,8 +27,8 @@
 }
 
 .stars {
-    height: auto;
-    margin-left: 15%;
+    display: flex;
+    justify-content: center;
 }
 
 .stars .cup {

@@ -12,7 +12,9 @@ class SearchTabs extends React.Component {
 
             <Tabs defaultActiveKey="Drink" id="uncontrolled-tab-example">
                 <Tab eventKey="Drink" title="Drink"><br></br>
-                    <FilteredResultForDrink />
+                    <FilteredResultForDrink 
+                    shops={this.props.shops}
+                    />
                 </Tab>
 
                 <Tab eventKey="Shop" title="Shop"><br></br>

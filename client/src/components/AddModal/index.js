@@ -15,6 +15,7 @@ class AddModal extends Component {
             selectedShop: {
                 name: "",
                 id: "",
+                logo: "",
             },
             shops: this.props.shops,
             shopResults: [],
@@ -60,7 +61,8 @@ class AddModal extends Component {
                 if (shop.name.toLowerCase().includes(query)) {
                     results.push({
                         name: shop.name,
-                        id: shop._id
+                        id: shop._id,
+                        logo: shop.logo
                     });
                 };
             };
@@ -79,13 +81,14 @@ class AddModal extends Component {
         }
     }
 
-    selectShop(name, id) {
-        console.log(name, id);
+    selectShop(name, id, logo) {
+        console.log(name, id, logo);
         this.setState({
             shopResults: [],
             selectedShop: {
                 name: name,
                 id: id,
+                logo: logo
             },
             shopInputDisplay: "none",
             shopDisabledDisplay: "block",
@@ -126,7 +129,7 @@ class AddModal extends Component {
                                     <input type="text" class="form-control" id="shopNameInputDisabled" style={{ display: this.state.shopDisabledDisplay }} placeholder={this.state.selectedShop.name} disabled></input>
                                     <ul class="list-group" id="matchingShops">
                                         {this.state.shopResults.map(result => (
-                                            <li class="list-group-item result" onClick={() => this.selectShop(result.name, result.id)}>
+                                            <li class="list-group-item result" onClick={() => this.selectShop(result.name, result.id, result.logo)}>
                                                 {result.name}
                                             </li>
                                         ))}
@@ -187,7 +190,8 @@ class AddModal extends Component {
                                         rating: this.state.rating,
                                         image: this.state.image,
                                         review: this.state.review,
-                                        shop: this.state.selectedShop.id
+                                        shop: this.state.selectedShop.id,
+                                        logo: this.state.selectedShop.logo
                                     }
                                     // console.log(drink);
                                     localStorage.setItem('drink', JSON.stringify(drink))

@@ -8,10 +8,10 @@ class LatestDrink extends Component {
     state = {
         image: "",
         price: "",
-        rating: 5,
         drink: "",
         user: "",
-        timestamp: ""
+        rating: 5,
+        timestamp: "",
     };
 
     componentDidMount() {
@@ -19,20 +19,18 @@ class LatestDrink extends Component {
             for (let i = res.data.length - 1; i < res.data.length; i--) {
                 const drink = res.data[i];
                 if (drink.image) {
-                    console.log(drink)
                     this.setState({
                         image: drink.image,
                         price: drink.price,
                         rating: drink.rating,
-                        drink: drink.name
+                        drink: drink.name,
                     })
-                } else {
-                    return
+                    break
                 }
             }
-        })
-    }
-
+            this.setState({ rating: this.state.rating })
+        });
+    };
 
 
     render() {
@@ -45,7 +43,7 @@ class LatestDrink extends Component {
                         <div class="img-overlay text-center"><span id="latest-price">${this.state.price}</span></div>
                     </div>
                     <div id="drink-body" class="card-body text-center pb-0">
-                        <div class="stars">
+                        <div class="stars pb-3">
                             <StaticRating
                                 rating={this.state.rating}
                             />
