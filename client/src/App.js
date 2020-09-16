@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Route, Switch, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, BrowserRouter, withRouter } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Search from "./pages/Search";
 
@@ -13,11 +13,13 @@ class App extends Component {
   }
 
   updateUser = (id, username) => {
-    
-  this.setState({user: {
-      username: username,
-      id: id
-    }})
+
+    this.setState({
+      user: {
+        username: username,
+        id: id
+      }
+    })
     console.log(this.state.user)
   }
 
@@ -27,20 +29,21 @@ class App extends Component {
 
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={() => <Landing 
-            updateUser={this.updateUser}
-            user={this.state.user}
-            />} 
-              
+            <Route exact path="/" component={() => <Landing
+              updateUser={this.updateUser}
+              user={this.state.user}
+            />}
             />
-            <Route exact path="/search" component={() => <Search 
-            user={this.state.user}
-            />} 
-            
+            <Route exact path="/search" component={() => <Search
+              user={this.state.user}
+            />}
             />
           </Switch>
         </BrowserRouter>
+
       </div>
+
+
     );
   }
 
