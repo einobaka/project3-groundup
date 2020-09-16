@@ -27,32 +27,6 @@ color: #F0F0E3;
 text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
 }
 
-/* .button {
-    background: transparent;
-    border: 2px solid #F0F0E3;
-    box-sizing: border-box;
-    border-radius: 12px;
-    color: #F0F0E3;
-    font-size: 1rem;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
-    font-weight: 650;
-    
-}
-#login {
-position: absolute;
-width: 146px;
-height: 62px;
-left: 1034px;
-top: 49px;
-}
-
-#signup {
-position: absolute;
-width: 146px;
-height: 62px;
-left: 1034px;
-top: 49px;
-} */
 
 @media only screen and (max-width: 900px) {
 
@@ -66,14 +40,4 @@ top: 5px;
 filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.33));
 border-radius: 11px; 
     }
-
-    /* #login-btn {
-        width: 127px;
-        height: auto;
-    }
-    
-    #signup-btn {
-        width: 127px;
-        height: auto;
-    } */
 }

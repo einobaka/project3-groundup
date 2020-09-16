@@ -68,7 +68,6 @@ class DBdrinks extends Component {
             <ListItems
               name={drinks.name}
               category={drinks.category}
-              name={drinks.name}
               size={drinks.size}
               price={drinks.price}
               rating={drinks.rating}

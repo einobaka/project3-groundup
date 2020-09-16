@@ -14,7 +14,7 @@ class Jumbotron extends Component {
         <div class="col">
           <div class="row">
             <div class="col-12 col-md-6 text-center pt-3">
-              <img id="jumbo-logo" src={logo} />
+              <img id="jumbo-logo" src={logo} alt='logo' />
             </div>
             <div class="col-12 col-md-6">
               <div class="row pt-5 py-md-5">

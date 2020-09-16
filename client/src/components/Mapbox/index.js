@@ -1,10 +1,7 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
 
-const token = mapboxgl.accessToken = 'pk.eyJ1Ijoia2V5bWFzdGVyNjE2IiwiYSI6ImNrZWZ6b3NmdjBvbHIycm16dmVoOHc5c2sifQ.1mzjAjlBuwog0SXrzQxxHw'
-
-//@,
+mapboxgl.accessToken = 'pk.eyJ1Ijoia2V5bWFzdGVyNjE2IiwiYSI6ImNrZWZ6b3NmdjBvbHIycm16dmVoOHc5c2sifQ.1mzjAjlBuwog0SXrzQxxHw'
 
 class MapBox extends React.Component {
     constructor(props) {

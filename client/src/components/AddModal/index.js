@@ -134,7 +134,7 @@ class AddModal extends Component {
                                             </li>
                                         ))}
                                     </ul>
-                                    <p style={{ display: this.state.shopInputDisplay }}>Can't find the shop you're at? Add it <a href="" data-toggle="modal" data-target="#shopModal">here</a>.</p>
+                                    <p style={{ display: this.state.shopInputDisplay }}>Can't find the shop you're at? Add it <a href="javascript:void(0)" data-toggle="modal" data-target="#shopModal">here</a>.</p>
                                     <div style={{ display: this.state.drinkDisplay }}>
                                         <h6 class="modal-title py-2">What are you drinking?</h6>
                                         <label for="categoryInput">Category:</label>
