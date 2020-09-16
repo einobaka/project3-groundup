@@ -14,6 +14,7 @@ module.exports = {
       .then(dbDrinks => res.json(dbDrinks))
       .catch(err => res.status(422).json(err));
   },
+  
 
   // Returns a single drink
   findById: function (req, res) {
