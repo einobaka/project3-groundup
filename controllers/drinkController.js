@@ -9,8 +9,8 @@ module.exports = {
   // Returns all drinks
   findAll: function (req, res) {
     db.Drink
-      .find({ shop: req.body.shop })
-      .populate("shop")
+      .find() // { shop: req.body.shop }
+      // .populate("shop")
       .then(dbDrinks => res.json(dbDrinks))
       .catch(err => res.status(422).json(err));
   },

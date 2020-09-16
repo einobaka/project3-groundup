@@ -8,7 +8,7 @@ import Welcome from "../Welcome"
 
 class Nav extends Component {
 
-   
+
   render() {
     return (
       <nav className="nav-area" >
@@ -17,20 +17,13 @@ class Nav extends Component {
             <img id="nav-logo" src={logo} />
           </div>
         </Link>
+
         <div class="navbar-header">
-          <p class="welcome">Welcome, <span class="user"></span>
-            <div>
-              <button id="login-btn" class="btn button" data-toggle="modal" data-target="#loginModal">Login</button>
-              <button id="signup-btn" class="btn button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
-            </div>
-            <Welcome/>
-            <div class="col-6 col-sm-4 col-lg-3">
-              
-            </div>
-            <div class="col-6 col-sm-4 col-lg-3">
-              
-            </div>
-          </p>
+          <Welcome />
+          <div class="col-6 col-sm-4 col-lg-3">
+          </div>
+          <div class="col-6 col-sm-4 col-lg-3">
+          </div>
         </div>
       </nav>
 

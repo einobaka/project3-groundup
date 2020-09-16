@@ -5,14 +5,11 @@ function SearchBarInShop(props) {
 
   return (
     
-    <form>
-        <label>
-          <input type="text"
-            onChange={props.handleInputChange}
-            value={props.search}
-            class="form-control" id="search-bar" placeholder="Search for a shop...
-          " />
-        </label>
+    <form >
+      <div class="form-group">
+        <input class="form-control" id="search-bar" type="text" placeholder='Filter by shop name...' onChange={props.handleInputChange}
+            value={props.search}></input>
+      </div>
     </form>
 
   );

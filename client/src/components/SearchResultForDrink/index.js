@@ -1,21 +1,18 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-// import SearchContainer from "../components/SearchContainer";
-// import SearchForm from "../components/SearchForm";
 import ListItems from "../DrinkList";
 import SearchBarInDrinks from '../SearchBarInDrinks'
 
 class DBdrinks extends Component {
   state = {
-    // search: "",
     originalResults: [],
     displayResults: [],
-    
   };
   componentDidMount() {
   // searchEntry = entry => { // entry is the word from the search bar
     // console.log(entry)
     API.getDrinkData().then(results => {
+      // console.log(results);
         const searchResult = results.data.map((res, i) => ({
           name: res.name,
           price: res.price,
@@ -28,7 +25,6 @@ class DBdrinks extends Component {
           key: i
         }))
         this.setState({ originalResults: searchResult,displayResults: searchResult });
-
       })
     }
 

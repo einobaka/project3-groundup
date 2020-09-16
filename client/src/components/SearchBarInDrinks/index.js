@@ -6,13 +6,10 @@ function SearchBarInDrinks(props) {
   return (
 
     <form >
-      <label>
-        <input type="text"
-          onChange={props.handleInputChange}
-          value={props.search}
-          class="form-control mt-1" id="search-bar" placeholder="Search for a drink..." />
-      </label>
-      {/* <input type="submit" value="Submit" /> */}
+      <div class="form-group">
+        <input class="form-control" id="search-bar" type="text" placeholder='Filter by drink name...' onChange={props.handleInputChange}
+          value={props.search}></input>
+      </div>
     </form>
 
   );
