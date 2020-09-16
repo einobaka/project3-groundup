@@ -1,3 +1,7 @@
+.card-header{
+    background: #F0F0E3;
+}
+
 .searching {
     position: absolute;
     width: 834px;
@@ -5,7 +9,7 @@
     left: 89px;
     top: 160px;
     
-    background: #F8F8F4;
+    background: #F0F0E3;
     box-shadow: 15px 15px 18px rgba(0, 0, 0, 0.25);
 }
 
