@@ -18,8 +18,8 @@ class Jumbotron extends Component {
             </div>
             <div class="col-12 col-md-6">
               <div class="row pt-5 py-md-5">
-                <h1 id="jumbo-text">Coffee lovers served...</h1>
-                <h1 id="jumbo-counter">{this.state.counter}</h1>
+                <h2 id="jumbo-text">Serving coffee lovers</h2>
+                <h2 id="jumbo-counter">{this.state.counter}</h2>
               </div>
               <div class="row text-center">
                 <div class="col-6 col-sm-4 col-lg-3">

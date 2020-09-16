@@ -1,41 +1,37 @@
 const db = require("../models");
 
-// const API = require('../client/src/utils/API');
-// API.getShopData(data).then(console.log(data));
-
 // Defining methods for the drinkController
 module.exports = {
 
   // Returns all drinks
   findAll: function (req, res) {
     db.Drink
-      .find() // { shop: req.body.shop }
-      // .populate("shop")
+      .find() 
       .then(dbDrinks => res.json(dbDrinks))
       .catch(err => res.status(422).json(err));
   },
 
+    // Creates a new drink record
+    create: function (req, res) {
+      // console.log(req.body)
+      db.Drink
+        .create(req.body)
+        .then(dbDrinks => {
+          console.log(dbDrinks)
+          db.Shop.findOneAndUpdate({ _id: req.body.shop }, { $push: { drinks: dbDrinks._id }})
+          .then(dbShop => false)
+        })
+        // .then(dbDrinks => res.json(dbDrinks));
+        // console.log(dbDrinks)
+        .catch(err => res.status(422).json(err));
+    },
+  
   // Returns a single drink
   findById: function (req, res) {
     db.Drink
       .findById(req.params.id)
       .populate("shop")
       .then(dbDrinks => res.json(dbDrinks))
-      .catch(err => res.status(422).json(err));
-  },
-
-  // Creates a new drink record
-  create: function (req, res) {
-    console.log(req.body)
-    db.Drink
-      .create(req.body)
-      .then(dbDrinks => {
-        console.log(dbDrinks)
-        db.Shop.findOneAndUpdate({ _id: req.body.shop }, { $push: { drinks: dbDrinks._id }})
-        .then(dbShop => false)
-      })
-      // .then(dbDrinks => res.json(dbDrinks));
-      // console.log(dbDrinks)
       .catch(err => res.status(422).json(err));
   },
 

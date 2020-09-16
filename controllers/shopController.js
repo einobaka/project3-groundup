@@ -32,7 +32,7 @@ module.exports = {
 
   // Creates a new shop record
   create: function (req, res) {
-    // console.log(req.body)
+    console.log(req.body)
     db.Shop.create({
       // user: req.user._id, //need to incorporate ***
       name: req.body.name,

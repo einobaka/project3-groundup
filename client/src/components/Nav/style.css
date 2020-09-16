@@ -27,12 +27,11 @@ color: #F0F0E3;
 text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
 }
 
-.button {
+/* .button {
     background: transparent;
     border: 2px solid #F0F0E3;
     box-sizing: border-box;
     border-radius: 12px;
-
     color: #F0F0E3;
     font-size: 1rem;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
@@ -53,8 +52,8 @@ width: 146px;
 height: 62px;
 left: 1034px;
 top: 49px;
+} */
 
-}
 @media only screen and (max-width: 900px) {
 
 #nav-logo {
@@ -68,7 +67,7 @@ filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.33));
 border-radius: 11px; 
     }
 
-    #login-btn {
+    /* #login-btn {
         width: 127px;
         height: auto;
     }
@@ -76,5 +75,5 @@ border-radius: 11px;
     #signup-btn {
         width: 127px;
         height: auto;
-    }
+    } */
 }

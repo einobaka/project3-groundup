@@ -5,9 +5,7 @@ import logo from '../../img/Logo_White.svg';
 import Welcome from "../Welcome"
 import Navbar from 'react-bootstrap/Navbar';
 
-
 class Nav extends Component {
-
 
   render() {
     return (

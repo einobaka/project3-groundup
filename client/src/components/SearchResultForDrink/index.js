@@ -7,23 +7,37 @@ class DBdrinks extends Component {
   state = {
     originalResults: [],
     displayResults: [],
+    shopResults: [],
   };
   componentDidMount() {
     API.getDrinkData().then(results => {
-        const searchResult = results.data.map((res, i) => ({
+      console.log(results.data)
+      const searchResult = results.data.map((res, i) => (
+        {
           name: res.name,
           price: res.price,
           category: res.category,
           size: res.size,
           rating: res.rating,
-          logo: res.logo,
+          logo: "https://res.cloudinary.com/dwah9rpyx/image/upload/v1600241620/Logo_White.fad02b4b_qvfe5e.svg",
           review: res.review,
           image: res.image,
+          shop: res.shop,
           key: i
         }))
-        this.setState({ originalResults: searchResult,displayResults: searchResult });
-      })
-    }
+      this.setState({ originalResults: searchResult, displayResults: searchResult });
+    })
+  }
+
+  // getLogo() {
+  //   API.getShopData().then(results => {
+  //     console.log(results)
+  //     const shopResults = results.data.map((res) => ({
+  //       logo: res.logo
+  //     }))
+  //   })
+  //   this.setState()
+  // }
 
   filterResults = (query, results) => {
     return results.filter(drinks => {
@@ -37,7 +51,7 @@ class DBdrinks extends Component {
 
     this.setState(prevState => ({
       displayResults:
-      query.length > 0
+        query.length > 0
           ? this.filterResults(query, prevState.originalResults)
           : prevState.originalResults
     }));
@@ -45,12 +59,10 @@ class DBdrinks extends Component {
 
   render() {
     return (
-      
-
 
       <ul className="list-group search-results" >
-        <SearchBarInDrinks search={this.state.search} 
-        handleInputChange = {this.handleInputChange}/>
+        <SearchBarInDrinks search={this.state.search}
+          handleInputChange={this.handleInputChange} />
         {
           this.state.displayResults.map(drinks => (
             <ListItems
@@ -63,6 +75,7 @@ class DBdrinks extends Component {
               logo={drinks.logo}
               review={drinks.review}
               image={drinks.image}
+              shop={drinks.shop}
               key={drinks.key}
             />
           ))

@@ -10,9 +10,6 @@ class DBshops extends Component {
     
   };
 
-
-
-
   componentDidMount() {
     API.getShopData().then(results => {
         const searchResult = results.data.map((res, i) => ({
