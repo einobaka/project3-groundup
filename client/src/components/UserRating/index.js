@@ -27,7 +27,7 @@ secondExample = {
 
   render() {
     return (
-      <div className="Ratings">
+      <div class="Ratings">
      
       <ReactStars {...this.secondExample} />
       
