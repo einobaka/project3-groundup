@@ -10,6 +10,7 @@ module.exports = {
       .then(dbDrinks => res.json(dbDrinks))
       .catch(err => res.status(422).json(err));
   },
+  
 
     // Creates a new drink record
     create: function (req, res) {
