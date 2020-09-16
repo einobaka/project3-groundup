@@ -196,6 +196,7 @@ class AddModal extends Component {
                                     // console.log(drink);
                                     localStorage.setItem('drink', JSON.stringify(drink))
                                     API.addDrink(drink);
+                                    window.location.reload();
                                 }}
                             >Add</button>
                         </div>
