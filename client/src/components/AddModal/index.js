@@ -189,7 +189,8 @@ class AddModal extends Component {
                                         review: this.state.review,
                                         shop: this.state.selectedShop.id
                                     }
-                                    console.log(drink);
+                                    // console.log(drink);
+                                    localStorage.setItem('drink', JSON.stringify(drink))
                                     API.addDrink(drink);
                                 }}
                             >Add</button>
