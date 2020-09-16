@@ -1,8 +1,22 @@
 # Project 3 - Ground Up
+![GroundUp](client\src\components\Jumbotron\logo.png)
+
+<br>
+
+https://infinite-coast-64919.herokuapp.com/
+
+![landingPage](client\src\img\landingPage.PNG)
+
 
 ## Descrption 
+### User Story
+AS a coffee lover -
+I WANT an app that will allow myself to post and share new coffee around the area with the best prices
+SO THAT I can also save money while telling others about the best (or worst) coffee I’ve had around the world 
 
-An application that allows users to search for, and log coffee prices that will show in an interactive map. Users will enjoy the functionality with leaving user reviews and favorites with other coffee lovers alike.
+(who doesn’t love to save money?)
+
+
 
 ## Table of Contents
 
@@ -17,27 +31,33 @@ An application that allows users to search for, and log coffee prices that will 
 ## Installation 
 
 ```
-npm install
+npm axios
+npm bcryptjs
+npm cloudinary-react
+npm express
+npm express-session
+npm if-env
+npm mapbox-gl
+npm mongoose
+npm passport-local
+npm react-currency-input
 
 ```
 
-## Usage
+## How it works
 
-See video of usage on Youtube: []( )
+Users can visit the application from anywhere.  On the home page, there is a display of the last drink and shop that was rated along with the most popular shops display.  There is a log in button and a sign up button. 
 
-```
-Screen Shots
-```
-
----
-
-## License
-
-TBD
+Once a user has signed/logged in it will take them to the search page.  At the search page, the user will be able to search for drinks or shops.  There will also be a display for history of posted drinks/shops by the user.
 
 ## Contributing
 
-Default: Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Please make sure to update tests as appropriate.
+Gene Torres
+Scott Harris
+Emily Gallina
+Sumnima Bhandari
+Tanner Nielsen
+
 
 ## Questions
 
