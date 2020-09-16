@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./style.css";
 
+
 function WelcomeButton() {
     // if there's a user show the message below
     // const loggedInUser = "";
@@ -28,12 +29,14 @@ function WelcomeButton() {
     //     <a href='http://localhost:8888'>
     //       <button>Login</button>
     //     </a>
-  
+  const logout = () => {
+      window.location.href = 'http://localhost:3000';
+  }
 
     return (<div class="navbar-header">
         <p class="welcome">Welcome: <span class="user"></span>
             <div class="col-sm-4 col-lg-12">
-                <button id="logout-btn" class="btn button" data-toggle="modal" data-target="#loginModal">LogOut</button>  
+                <button onClick = {logout} id="logout-btn" class="btn button">LogOut</button>  
             </div>
         </p>
     </div>
