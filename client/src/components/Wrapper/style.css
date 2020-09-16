@@ -3,10 +3,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    width: 100vw;
-
-    /* height: 1024px; */
-    
+    width: 100vw;    
     background: #F0F0E3;
 
 background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F0F0E3 78.12%), url("../../img/beans.jpg");

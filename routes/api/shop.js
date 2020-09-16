@@ -2,10 +2,6 @@ const router = require("express").Router();
 const shopController = require("../../controllers/shopController");
 
 // Matches with "/api/shops"
-// router.route("/")
-//   .get(shopController.findAllByUser)
-//   .post(shopController.create);
-
 router.route("/")
   .get(shopController.findAll)
   .post(shopController.create);

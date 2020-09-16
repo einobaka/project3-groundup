@@ -9,7 +9,3 @@ router.use("/drink", drinkRoutes);
 router.use("/shop", shopRoutes);
 
 module.exports = router;
-
-// const userRoutes = require("./user");
-// login routes
-// router.use("/user", userRoutes);
