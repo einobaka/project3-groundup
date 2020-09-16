@@ -4,6 +4,7 @@ const drinkController = require("../../controllers/drinkController");
 // Matches with "/api/drink"
 router.route("/")
   .get(drinkController.findAll)
+  // .get(drinkController.findOne)
   .post(drinkController.create);
 
 router
