@@ -59,7 +59,7 @@ Once a user has signed/logged in it will take them to the search page.  At the s
 
 ## Questions
 
-For more information please find the repository [here](https://github.com/einobaka/).
+For more information please find the repository [here](https://github.com/einobaka/project3-groundup).
 
 For additional quesions please contact us at: [GroundUP](einobaka@gmail.com) crew
 
