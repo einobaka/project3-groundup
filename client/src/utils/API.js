@@ -20,12 +20,6 @@ export default {
   addDrink: function(data) {
     return axios.post('/api/drink', data);
   },
-
-  // // Drink name
-  // getDrinkName: function(name) {
-  //   // console.log(name)
-  //   return axios.get('/api/drink', name);
-  // },
   
   addShop: function(data) {
     // console.log(data)
@@ -35,18 +29,4 @@ export default {
   getShopData: function(data) {
     return axios.get('/api/shop', data);
   },
-
-  // Gets the book with the given id
-  // getOneDrink: function(data) {
-  //   return axios.get("/api/drink/");
-  // }
-  // // Deletes the book with the given id
-  // deleteBook: function(id) {
-  //   return axios.delete("/api/books/" + id);
-  // },
-  // // Saves a book to the database
-  // saveBook: function(bookData) {
-  //   return axios.post("/api/books", bookData);
-  // }
-
 };

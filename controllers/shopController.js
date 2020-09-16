@@ -34,18 +34,10 @@ module.exports = {
   create: function (req, res) {
     console.log(req.body)
     db.Shop.create({
-      // user: req.user._id, //need to incorporate ***
       name: req.body.name,
       logo: req.body.logo,
-      address: req.body.address,
+      address: req.body.address
     })
-      // .then((dbShops) => {
-      //   db.User.findByIdAndUpdate(
-      //     // {_id: req.user._id}, // need to incorporate
-      //     { $push: { shops: dbShops._id } }
-      //   ).then((dbShops) => res.json(dbShops));
-
-      // })
       .catch(err => res.status(422).json(err));
   },
 
