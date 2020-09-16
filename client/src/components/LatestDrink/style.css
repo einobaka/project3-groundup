@@ -27,6 +27,15 @@
 }
 
 .stars {
-    height: 40px;
+    height: auto;
+    margin-left: 15%;
 }
 
+.stars .cup {
+    height: 55px;
+    width: auto;
+}
+
+#drink-body {
+    height: 220px;
+}

@@ -10,7 +10,7 @@ class Jumbotron extends Component {
 
   render() {
     return (
-      <div class="row" id="jumbotron">
+      <div class="row mb-4" id="jumbotron">
         <div class="col">
           <div class="row">
             <div class="col-12 col-md-6 text-center pt-3">

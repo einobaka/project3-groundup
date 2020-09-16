@@ -31,6 +31,7 @@ class AddModal extends Component {
         this.handleCurrencyChange = this.handleCurrencyChange.bind(this);
         this.shopSearch = this.shopSearch.bind(this);
         this.updateStars = this.updateStars.bind(this);
+        this.logoUpload = this.logoUpload.bind(this);
     }
 
     componentDidMount() {
@@ -166,8 +167,7 @@ class AddModal extends Component {
                                             updateStars={this.updateStars}
                                         />
                                         <p for="reviewInput" class="pt-2">Review: </p>
-                                        <textarea rows="5" cols="60" id="reviewInput" style={{ resize: "none" }} name="review" onChange={this.handleInputChange}>
-                                            Any comments to add?
+                                        <textarea placeholder="Any comments to add?" rows="5" cols="60" id="reviewInput" style={{ resize: "none" }} name="review" onChange={this.handleInputChange}>
                                         </textarea>
                                     </div>
                                 </div>
