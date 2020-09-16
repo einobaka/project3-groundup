@@ -3,43 +3,7 @@ var db = require("../../models");
 var passport = require("passport");
 
 module.exports = function (app) {
-    // Using the passport.authenticate middleware with our local strategy.
-    // If the user has valid login credentials, send them to the members page.
-    // Otherwise the user will be sent an error
-    // app.post("/api/login", passport.authenticate("local"), function (req, res) {
-    //     console.log("route-hit");
-    //     res.json(req.user);
-    // })
 
-    // Register User
-    // app.post('/register', async function (req, res) {
-
-    //     //     try {
-    //     //         let user = await db.User.findOne({ email: req.body.email });
-    //     //         if (user) {
-    //     //             return res.status(400).json({ errors: [{ msg: "User already exists" }] })
-    //     //             // console.log(req.body);
-
-
-
-    //     //             // Return jsonwebtoken
-    //     //             // res.send('User registered')
-    //     // }
-    //     var newUser = new db.User({
-    //         name: req.body.name,
-    //         email: req.body.email,
-    //         username: req.body.username,
-    //         password: req.body.password
-    //     });
-    //     let name = "";
-    //     db.User.createUser(newUser, function (err, user) {
-    //         if (err) throw err;
-    //         console.log(user.name)
-    //         // name = user.name;
-
-    //     });
-
-    // }
     // Register a new user 
     app.post("/register", function (req, res) {
         console.log(req.body);
@@ -52,14 +16,8 @@ module.exports = function (app) {
         db.User.createUser(newUser, function (err, user) {
             if (err) throw err;
             res.send(user).end()
-            // const { name, email } = user;
-            // console.log({ name, email });
         })
-        // .then((data) => res.json(data))
-        // .then((data) => console.log(data))
-        // .catch(err => { console.log(err); })
     });
-
 
         // Endpoint to login
         app.post('/login',
