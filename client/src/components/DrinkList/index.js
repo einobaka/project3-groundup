@@ -1,14 +1,9 @@
 import React from "react";
 import "./style.css";
 import StaticRating from "../StaticRating"
-import { OverlayTrigger, Tooltip, Popover, Button } from 'react-bootstrap';
+import { OverlayTrigger, Popover, Button } from 'react-bootstrap';
 
 function ListItems(props) {
-
-  // const renderTooltip = (props) => (
-  //   <Tooltip id="button-tooltip" {...props}>
-  //     Simple tooltip
-  //   </Tooltip>);
 
   const popover = (
     <Popover id="popover-basic">
@@ -30,15 +25,16 @@ function ListItems(props) {
     <li key={props.name} className="list-group-item">
       <div class="everything">
         <span><img alt="logo" src={props.logo} className="img-fluid" class="logo" /></span>
-        <card>
+        
+        <card >
           <div class="drink-type">
             <h1 class="category">{props.name}</h1>
           </div>
           <br></br>
           <div class="drink-details">
-            <p class="name"> {props.category} | </p>
-            <p class="size"> <h7>{props.size} oz</h7> </p>
-            <p class="price"> <h2> ${props.price} </h2></p>
+            <p class="name"> {props.category} </p>
+            <p class="size"> {props.size} oz </p>
+            <p class="price"> ${props.price} </p>
           </div>
           <div class="drink-ratings">
             <RatingPopover />

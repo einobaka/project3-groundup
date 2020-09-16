@@ -5,3 +5,7 @@ height: 575px;
 left: 1044px;
 top: 160px;
 }
+
+#logout-btn {
+    background-color: gray;
+}

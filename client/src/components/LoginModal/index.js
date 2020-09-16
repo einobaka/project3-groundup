@@ -31,7 +31,7 @@ class LoginModal extends Component {
         }
         this.props.loginSubmit(data);
         localStorage.setItem('user', data.username)
-        console.log(data.username)
+        // console.log(data.username)
     }
 
     render() {
