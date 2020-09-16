@@ -27,6 +27,7 @@ class UserRating extends Component {
 
   render() {
     return (
+      
       <div className="Ratings">
 
         <ReactStars {...this.secondExample} />

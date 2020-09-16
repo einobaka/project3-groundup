@@ -2,21 +2,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const drinkSchema = new Schema({
-  // user: {
-  //   type: Schema.Types.ObjectId,
-  //   ref: "user",
-  //   required: true,
-  // },
   name: { type: String },
   price: { type: String },
   category: { type: String },
   size: { type: String },
   rating: { type: Number },
   logo: { type: String },
-  // logo: {
-  //   type: Schema.Types.ObjectId,
-  //   ref: "shop"
-  // },
   review: { type: String },
   image: { type: String },
   shop: { type: String },

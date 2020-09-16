@@ -8,9 +8,8 @@
 .logo {
   float: left;
   padding: 5px;
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
+  height: auto;
+  width: 100px;
 }
 
 .everything {

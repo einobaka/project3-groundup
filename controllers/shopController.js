@@ -36,6 +36,7 @@ module.exports = {
     db.Shop.create({
       name: req.body.name,
       logo: req.body.logo,
+      address: req.body.address
     })
       .catch(err => res.status(422).json(err));
   },

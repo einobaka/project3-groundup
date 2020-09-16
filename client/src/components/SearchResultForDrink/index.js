@@ -25,6 +25,7 @@ class DBdrinks extends Component {
           shop: res.shop,
           key: i
         }))
+      searchResult.reverse();
       this.setState({ originalResults: searchResult, displayResults: searchResult });
     })
   }
