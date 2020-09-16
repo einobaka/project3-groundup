@@ -4,7 +4,6 @@ import empty from '../../img/empty.png';
 import half from '../../img//half.png';
 import full from '../../img//full.png';
 import "./style.css"
-// import { set } from "mongoose";
  
 class StaticRating extends PureComponent {
 
@@ -19,10 +18,8 @@ class StaticRating extends PureComponent {
   
   render() {
     return (
-      <div className="Ratings">
-     
+      <div class="Ratings">
       <ReactStars {...this.firstExample} />
-      
     </div>
     )
   }
