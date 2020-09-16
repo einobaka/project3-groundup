@@ -1,20 +1,19 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-// import SearchContainer from "../components/SearchContainer";
-// import SearchForm from "../components/SearchForm";
 import ListItems from "../ShopList";
 import SearchBarInShop from '../SearchBarInShop'
 
 class DBshops extends Component {
   state = {
-    // search: "",
     originalResults: [],
     displayResults: [],
     
   };
+
+
+
+
   componentDidMount() {
-  // searchEntry = entry => { // entry is the word from the search bar
-    // console.log(entry)
     API.getShopData().then(results => {
         const searchResult = results.data.map((res, i) => ({
           name: res.name,
