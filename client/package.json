@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
+    "@popperjs/core": "^2.4.4",
     "axios": "^0.18.0",
     "bootstrap": "^4.5.2",
     "react": "^16.6.3",

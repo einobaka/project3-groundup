@@ -9,10 +9,7 @@ class DBdrinks extends Component {
     displayResults: [],
   };
   componentDidMount() {
-  // searchEntry = entry => { // entry is the word from the search bar
-    // console.log(entry)
     API.getDrinkData().then(results => {
-      // console.log(results);
         const searchResult = results.data.map((res, i) => ({
           name: res.name,
           price: res.price,
@@ -48,6 +45,8 @@ class DBdrinks extends Component {
 
   render() {
     return (
+      
+
 
       <ul className="list-group search-results" >
         <SearchBarInDrinks search={this.state.search} 
