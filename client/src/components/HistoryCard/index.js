@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import './style.css';
 
 const user = localStorage.getItem('user');
-const drinks = JSON.parse(localStorage.getItem('drink'))
+// const drinks = JSON.parse(localStorage.getItem('drink'))
 const logout = () => {
     window.location.href = '/';
 }

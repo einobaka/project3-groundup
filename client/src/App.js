@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch, BrowserRouter, withRouter } from "react-router-dom";
+import { BrowserRouter as Route, Switch, BrowserRouter } from "react-router-dom";
 import Landing from "./pages/Landing";
-import Nav from "./components/Nav";
 import Search from "./pages/Search";
-import { set } from "mongoose";
 
 class App extends Component {
   state = {
@@ -42,10 +40,7 @@ class App extends Component {
             />
           </Switch>
         </BrowserRouter>
-
       </div>
-
-
     );
   }
 

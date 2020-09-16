@@ -42,22 +42,22 @@ class TopShops extends Component {
                 <div class="card mx-5 shadow-lg">
                     <div class="img-container">
                         <img id="one-image" src={this.state.one.image} class="card-img-top" alt="Top Shop"></img>
-                        <div class="img-overlay text-center"><img id="one-logo" src={this.state.one.logo}></img> </div>
+                        <div class="img-overlay text-center"><img id="one-logo" src={this.state.one.logo}alt=''></img> </div>
                     </div>
                     <div class="card-body">
                         <div id="carousel" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img class="d-block w-100 carousel-logo" src={this.state.two.logo}></img>
+                                    <img class="d-block w-100 carousel-logo" src={this.state.two.logo} alt=''></img>
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 carousel-logo" src={this.state.three.logo}></img>
+                                    <img class="d-block w-100 carousel-logo" src={this.state.three.logo} alt=''></img>
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 carousel-logo" src={this.state.four.logo}></img>
+                                    <img class="d-block w-100 carousel-logo" src={this.state.four.logo} alt=''></img>
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 carousel-logo" src={this.state.five.logo}></img>
+                                    <img class="d-block w-100 carousel-logo" src={this.state.five.logo} alt=''></img>
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
