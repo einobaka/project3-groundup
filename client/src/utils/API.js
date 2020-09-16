@@ -34,12 +34,12 @@ export default {
 
   getShopData: function(data) {
     return axios.get('/api/shop', data);
-  }
+  },
 
-  // // Gets the book with the given id
-  // getBook: function(id) {
-  //   return axios.get("/api/books/" + id);
-  // },
+  // Gets the book with the given id
+  // getOneDrink: function(data) {
+  //   return axios.get("/api/drink/");
+  // }
   // // Deletes the book with the given id
   // deleteBook: function(id) {
   //   return axios.delete("/api/books/" + id);
